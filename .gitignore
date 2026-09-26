@@ -1,0 +1,17 @@
+# Inputs / generated artifacts
+specbooks/
+recon/
+out/
+*.pdf
+
+# Private notes
+CHALLENGE.md
+
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
