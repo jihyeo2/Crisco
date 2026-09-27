@@ -37,11 +37,14 @@ def test_non_positive_qty_rejected(qty):
         closer(qty=qty)
 
 
-def test_not_used_set_keeps_number_but_no_components():
+def test_not_used_set_can_be_empty():
     hw = HardwareSet(set_number="07", status=SetStatus.NOT_USED)
     assert hw.status is SetStatus.NOT_USED and hw.components == []
-    with pytest.raises(ValidationError, match="not_used"):
-        HardwareSet(set_number="07", status="not_used", components=[closer()])
+
+
+def test_not_used_set_keeps_components_printed_under_it():
+    hw = HardwareSet(set_number="07", status="not_used", components=[closer()])
+    assert hw.status is SetStatus.NOT_USED and len(hw.components) == 1
 
 
 @pytest.mark.parametrize("line_id", ["p40L12", "L012", "p40_L1", "40_L012"])

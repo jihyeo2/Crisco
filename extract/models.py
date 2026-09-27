@@ -29,6 +29,8 @@ ComponentField = Literal["qty", "description", "catalog_number", "mfr", "finish"
 
 class SetStatus(str, Enum):
     ACTIVE = "active"
+    # Kept, never priced. A not_used set may still list the components the spec
+    # left printed under it (e.g. "Set 07 — DELETED" over the old items).
     NOT_USED = "not_used"
 
 
@@ -67,12 +69,6 @@ class HardwareSet(BaseModel):
     components: list[Component] = Field(default_factory=list)
     source_line_ids: list[LineId] = Field(default_factory=list)
     confidence: Confidence = 1.0
-
-    @model_validator(mode="after")
-    def _not_used_has_no_components(self) -> "HardwareSet":
-        if self.status is SetStatus.NOT_USED and self.components:
-            raise ValueError(f"set {self.set_number} is not_used but has components")
-        return self
 
 
 class ExtractionResult(BaseModel):
