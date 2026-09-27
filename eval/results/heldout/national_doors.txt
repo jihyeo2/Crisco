@@ -1,0 +1,19 @@
+== 15e2b8ac-FS17_Specs_V1.pdf  [UNREVIEWED DRAFT]
+  set recall      15/15 (100%)
+  set precision   15/15 (100%)
+  scored sets     4
+  component recall    21/21 (100%)
+  component precision 21/21 (100%)
+  main accuracy   104/105 (99%)   (qty, description, catalog_number, mfr, finish)
+    qty             21/21 (100%)
+    description     21/21 (100%)
+    catalog_number  20/21 (95%)
+    mfr             21/21 (100%)
+    finish          21/21 (100%)
+  mfr+finish both right 20/20 (100%)   swapped: 0
+  guessed qty (blank in PDF, number in output): 0 of 0 blank
+  notes (free text, not in main accuracy) 20/21 (95%)
+  mismatches:
+    set 15 'ALL HARDWARE' catalog_number: expected None, got 'BY GATE MFG'
+  notes mismatches:
+    set 15 'ALL HARDWARE': expected 'BY GATE MFG', got None

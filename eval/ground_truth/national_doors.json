@@ -1,0 +1,54 @@
+{
+  "source_pdf": "specbooks/National Doors and Hardware/15e2b8ac-FS17_Specs_V1.pdf",
+  "pages": "406-412",
+  "held_out": "Not used when writing the prompt rules or the code seed; tests whether they generalize.",
+  "all_set_numbers_reviewed": false,
+  "all_set_numbers": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"],
+  "sets": [
+    {
+      "set_number": "01", "status": "active", "reviewed": false,
+      "review_notes": "Columns: QTY | (EA) | DESCRIPTION | CATALOG NUMBER | FINISH | MFR; 'EA' is a unit, not part of qty. Pull finish wraps: '630-' then '316' on the next line, read as '630-316'. The three lines after the rows (balance of hardware by aluminum supplier, card reader, Level E testing) are set notes, not components.",
+      "components": [
+        {"qty": 4, "description": "HINGE", "catalog_number": "5BB1 4.5 X 4.5 NRP", "mfr": "IVE", "finish": "630", "notes": null},
+        {"qty": 1, "description": "POWER TRANSFER", "catalog_number": "EPT10 CON", "mfr": "VON", "finish": "689", "notes": null},
+        {"qty": 1, "description": "EXIT DEVICE", "catalog_number": "EX76 CVR Electric Trim", "mfr": "ADA", "finish": "626", "notes": null},
+        {"qty": 1, "description": "RIM CYLINDER", "catalog_number": "20-057 ICX", "mfr": "SCH", "finish": "626", "notes": null},
+        {"qty": 1, "description": "90 DEG OFFSET PULL", "catalog_number": "8190EZHD 10\" O", "mfr": "IVE", "finish": "630-316", "notes": null},
+        {"qty": 1, "description": "SURFACE CLOSER", "catalog_number": "4040XP SCUSH", "mfr": "LCN", "finish": "689", "notes": null},
+        {"qty": 1, "description": "CUSH SHOE SUPPORT", "catalog_number": "4040XP-30", "mfr": "LCN", "finish": "689", "notes": null},
+        {"qty": 1, "description": "BLADE STOP SPACER", "catalog_number": "4040XP-61", "mfr": "LCN", "finish": "689", "notes": null},
+        {"qty": 1, "description": "THRESHOLD", "catalog_number": "566A-223", "mfr": "ZER", "finish": "A", "notes": null}
+      ]
+    },
+    {
+      "set_number": "05", "status": "active", "reviewed": false,
+      "review_notes": "'21A | 21B' under the header are door numbers, not components.",
+      "components": [
+        {"qty": 3, "description": "HINGE", "catalog_number": "5BB1 4.5 X 4.5", "mfr": "IVE", "finish": "652", "notes": null},
+        {"qty": 1, "description": "CLASSROOM LOCK", "catalog_number": "ND70PD RHO", "mfr": "SCH", "finish": "626", "notes": null},
+        {"qty": 1, "description": "SURFACE CLOSER", "catalog_number": "4040XP RW/PA", "mfr": "LCN", "finish": "689", "notes": null},
+        {"qty": 1, "description": "KICK PLATE", "catalog_number": "8400 10\" X 2\" LDW B-CS", "mfr": "IVE", "finish": "630", "notes": null},
+        {"qty": 1, "description": "WALL STOP", "catalog_number": "WS406/407CCV", "mfr": "IVE", "finish": "630", "notes": null},
+        {"qty": 1, "description": "GASKETING", "catalog_number": "188SBK PSA", "mfr": "ZER", "finish": "BK", "notes": null}
+      ]
+    },
+    {
+      "set_number": "08", "status": "active", "reviewed": false,
+      "review_notes": "Third group on p409. '3 | 6 | 10' are door numbers. Gasketing finish 'BR' is not in the seed: only its column can decide it.",
+      "components": [
+        {"qty": 3, "description": "HINGE", "catalog_number": "5BB1 4.5 X 4.5", "mfr": "IVE", "finish": "652", "notes": null},
+        {"qty": 1, "description": "ENTRANCE LOCK", "catalog_number": "ND53PD RHO", "mfr": "SCH", "finish": "626", "notes": null},
+        {"qty": 1, "description": "KICK PLATE", "catalog_number": "8400 10\" X 2\" LDW B-CS", "mfr": "IVE", "finish": "630", "notes": null},
+        {"qty": 1, "description": "WALL STOP", "catalog_number": "WS406/407CCV", "mfr": "IVE", "finish": "630", "notes": null},
+        {"qty": 1, "description": "GASKETING", "catalog_number": "488SBR PSA", "mfr": "ZER", "finish": "BR", "notes": null}
+      ]
+    },
+    {
+      "set_number": "15", "status": "active", "reviewed": false,
+      "review_notes": "Last group; section ends on p412 (p413 is 08 80 00 Glazing). 'BY GATE MFG' sits in the catalog column but names who supplies it, like 'By Door Manufacturer' in JC Ryan: catalog and mfr null, text in notes.",
+      "components": [
+        {"qty": 1, "description": "ALL HARDWARE", "catalog_number": null, "mfr": null, "finish": null, "notes": "BY GATE MFG"}
+      ]
+    }
+  ]
+}
