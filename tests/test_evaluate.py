@@ -65,3 +65,14 @@ def test_unreviewed_sets_only_scored_on_request():
     assert evaluate(out, TRUTH).scored_sets == 1
     r = evaluate(out, TRUTH, include_unreviewed=True)
     assert r.scored_sets == 2 and "UNREVIEWED" in r.label
+
+
+def test_notes_scored_separately_from_main_accuracy():
+    truth = {"source_pdf": "x.pdf", "sets": [{"set_number": "1", "reviewed": True, "components": [
+        dict(c(1, "Stop", "RM860", "Rockwood"), notes="Per Conditions")]}]}
+    out = {"sets": [{"set_number": "1", "components": [
+        dict(c(1, "Stop", "RM860", "Rockwood"), notes="per conditions, see plans")]}]}
+    r = evaluate(out, truth)
+    assert (r.notes_correct, r.notes_total) == (0, 1)
+    assert r.main_correct == 5            # all five main fields right despite the notes
+    assert r.mismatches == [] and len(r.notes_mismatches) == 1

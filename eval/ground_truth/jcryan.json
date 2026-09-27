@@ -24,12 +24,12 @@
       "set_number": "EX-2.0",
       "description": "Terrace Door Assembly",
       "status": "active",
-      "reviewed": false,
-      "review_notes": "Crosses p24 -> p25: the gasketing row is on p25. First two rows verified; gasketing row notes need checking on p25.",
+      "reviewed": true,
+      "review_notes": "Crosses p24 -> p25: the gasketing row is on p25 ('Gasketing, threshold, sweep, astragal | By Door Manufacturer'). Verified against source.",
       "components": [
         {"qty": null, "description": "Hanging Device", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Door Manufacturer"},
         {"qty": null, "description": "Panic Hardware Device", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Door Manufacturer"},
-        {"qty": null, "description": "Gasketing, threshold, sweep, astragal", "catalog_number": null, "mfr": null, "finish": null, "notes": null}
+        {"qty": null, "description": "Gasketing, threshold, sweep, astragal", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Door Manufacturer"}
       ]
     },
     {

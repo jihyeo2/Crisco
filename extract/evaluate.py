@@ -6,9 +6,12 @@ Only ground truth marked "reviewed": true is scored (pass --include-unreviewed t
 score drafts, clearly labeled as such). Reports:
 - set recall / precision over the document's full list of set numbers
 - component recall / precision within the scored sets
-- per-field accuracy (qty, description, catalog_number, mfr, finish) on matched rows
-- mfr/finish accuracy, plus how often mfr and finish were swapped
+- main accuracy over qty, description, catalog_number, mfr, finish on matched rows,
+  and each of those fields on its own
+- mfr/finish reported on their own too (both right, and how often they were swapped)
 - guessed quantities: printed qty was blank but the output gave a number
+- notes on a separate line, outside the main accuracy: free text that varies across
+  specbooks, so it would only add noise there
 """
 
 import argparse
@@ -74,7 +77,14 @@ class Report:
     swapped: int = 0
     qty_blank_truth: int = 0
     qty_guessed: int = 0
+    notes_correct: int = 0
+    notes_total: int = 0
     mismatches: list[str] = field(default_factory=list)
+    notes_mismatches: list[str] = field(default_factory=list)
+
+    @property
+    def main_correct(self) -> int:
+        return sum(self.field_correct.values())
 
     def print(self) -> None:
         pct = lambda a, b: f"{a}/{b} ({100 * a / b:.0f}%)" if b else "n/a"
@@ -88,15 +98,23 @@ class Report:
         print(f"  scored sets     {self.scored_sets}")
         print(f"  component recall    {pct(self.comp_matched, self.comp_truth)}")
         print(f"  component precision {pct(self.comp_matched, self.comp_pred)}")
+        print(f"  main accuracy   {pct(self.main_correct, len(FIELDS) * self.comp_matched)}"
+              f"   ({', '.join(FIELDS)})")
         for f in FIELDS:
             print(f"    {f:15} {pct(self.field_correct[f], self.comp_matched)}")
         print(f"  mfr+finish both right {pct(self.mfr_finish_correct, self.mfr_finish_total)}"
               f"   swapped: {self.swapped}")
         print(f"  guessed qty (blank in PDF, number in output): "
               f"{self.qty_guessed} of {self.qty_blank_truth} blank")
+        print(f"  notes (free text, not in main accuracy) "
+              f"{pct(self.notes_correct, self.notes_total)}")
         if self.mismatches:
             print("  mismatches:")
             for m in self.mismatches:
+                print(f"    {m}")
+        if self.notes_mismatches:
+            print("  notes mismatches:")
+            for m in self.notes_mismatches:
                 print(f"    {m}")
 
 
@@ -144,6 +162,14 @@ def evaluate(output: dict, truth: dict, include_unreviewed: bool = False) -> Rep
                     report.mismatches.append(
                         f"set {tset['set_number']} {t['description']!r} {f}: "
                         f"expected {t.get(f)!r}, got {p.get(f)!r}")
+            if "notes" in t:  # only rows whose ground truth records notes
+                report.notes_total += 1
+                if norm(t["notes"]) == norm(p.get("notes")):
+                    report.notes_correct += 1
+                else:
+                    report.notes_mismatches.append(
+                        f"set {tset['set_number']} {t['description']!r}: "
+                        f"expected {t['notes']!r}, got {p.get('notes')!r}")
             if t["qty"] is None and p.get("qty") is not None:
                 report.qty_guessed += 1
             if t.get("mfr") or t.get("finish"):
