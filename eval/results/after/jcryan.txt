@@ -1,0 +1,15 @@
+== 087100 - Door Hardware-6.pdf
+  set recall      38/38 (100%)
+  set precision   38/38 (100%)
+  scored sets     9
+  component recall    47/47 (100%)
+  component precision 47/47 (100%)
+  main accuracy   235/235 (100%)   (qty, description, catalog_number, mfr, finish)
+    qty             47/47 (100%)
+    description     47/47 (100%)
+    catalog_number  47/47 (100%)
+    mfr             47/47 (100%)
+    finish          47/47 (100%)
+  mfr+finish both right 38/38 (100%)   swapped: 0
+  guessed qty (blank in PDF, number in output): 0 of 13 blank
+  notes (free text, not in main accuracy) 47/47 (100%)

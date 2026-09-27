@@ -169,3 +169,16 @@ def _resolve_unknown(sets: list[HardwareSet], by_id: dict[str, Line],
                 "components": rest, "locations": compute_locations(ids, by_id),
                 "confidence": min(s.confidence, BAD_EVIDENCE_CONFIDENCE_CAP)}))
     return out
+
+
+def strip_mfr_prefix(sets: list[HardwareSet]) -> list[HardwareSet]:
+    """'IVES - 5BB1' with mfr 'IVES' -> catalog '5BB1'. Only removes text that repeats
+    the component's own mfr value followed by a dash; nothing else is touched."""
+    def clean(comp: Component) -> Component:
+        if not (comp.mfr and comp.catalog_number):
+            return comp
+        m = re.match(rf"\s*{re.escape(comp.mfr.strip())}\s*[-–—]\s*(\S.*)$",
+                     comp.catalog_number, re.IGNORECASE)
+        return comp.model_copy(update={"catalog_number": m.group(1)}) if m else comp
+
+    return [s.model_copy(update={"components": [clean(c) for c in s.components]}) for s in sets]

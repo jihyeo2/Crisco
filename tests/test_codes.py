@@ -153,3 +153,21 @@ def test_stray_no_outside_any_column_is_not_forced():
                               {l.id: l for r in rows for l in r}, Legend())
     stop = s[0].components[2]
     assert (stop.mfr, stop.finish) == ("IVE", "NO") and stop.field_confidence == {"finish": 0.5}
+
+
+def test_prose_column_is_not_inferred_as_the_other_kind():
+    # JC Ryan set 3.0: "By Fire Rated Door Manufacturer" sits apart from the mfr
+    # column; with only one labeled column it must not become a finish column.
+    rows = [row(30, 1, 100, [(74, "Hinge"), (300, "By Fire Rated Door Manufacturer")]),
+            row(30, 3, 120, [(74, "Gasketing"), (300, "By Fire Rated Door Manufacturer")]),
+            row(30, 5, 140, [(74, "Exit Device"), (460, "Sargent")]),
+            row(30, 7, 160, [(74, "Stop"), (460, "Rockwood")])]
+    comps = [comp(rows[0], "By Fire Rated Door Manufacturer", None, "Hinge"),
+             comp(rows[1], "By Fire Rated Door Manufacturer", None, "Gasketing"),
+             comp(rows[2], "Sargent", None, "Exit Device"),
+             comp(rows[3], "Rockwood", None, "Stop")]
+    s, _ = resolve_mfr_finish([HardwareSet(set_number="3.0", components=comps)],
+                              {l.id: l for r in rows for l in r}, Legend())
+    hinge = s[0].components[0]
+    assert hinge.finish is None and hinge.mfr == "By Fire Rated Door Manufacturer"
+    assert hinge.field_confidence == {"mfr": 0.5}     # kept as the model had it, flagged

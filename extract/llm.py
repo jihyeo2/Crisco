@@ -43,6 +43,18 @@ Rules:
 - mfr is the manufacturer name or abbreviation (e.g. IVE, LCN, Norton); finish is the
   finish code (e.g. 626, 630, US26D, 689). If you can't tell which is which, still
   assign your best guess and list both fields in low_confidence_fields.
+- catalog_number is the model/part number text only. Qualifiers printed after it,
+  such as "(as required)", "Per Conditions" or "(Cutouts as Required)", go in notes.
+- When one cell prints manufacturer and product together as "MANUFACTURER - PRODUCT"
+  (e.g. "IVES - 5BB1 4.5\" x 4.5\""), mfr is the part before the first " - " and
+  catalog_number is the rest. Never repeat the manufacturer in catalog_number.
+- A component is a hardware row. Set-level notes printed under a set (e.g.
+  "PROVIDE FLOOR STOP @ DOOR 223", "COORDINATE W/ ... MFR.") are not components;
+  never output a component whose description is just "NOTE".
+- In tabular schedules, the column under the set number (room names, door type,
+  labels such as "SINGLE DOOR" or "CARD READER") describes the set, not a row. A
+  component's description comes only from the hardware item/type column, including
+  its wrapped continuation lines in that same column.
 - line_ids: every line a value came from. header_line_ids: lines for the set number,
   description, and any NOT USED marker. Use only IDs that appear in the input.
 - Pages may start or end mid-set. Report partial sets with the set number if it is
