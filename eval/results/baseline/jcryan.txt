@@ -1,0 +1,39 @@
+== 087100 - Door Hardware-6.pdf
+  set recall      38/38 (100%)
+  set precision   38/38 (100%)
+  scored sets     9
+  component recall    47/47 (100%)
+  component precision 47/47 (100%)
+  main accuracy   224/235 (95%)   (qty, description, catalog_number, mfr, finish)
+    qty             47/47 (100%)
+    description     47/47 (100%)
+    catalog_number  36/47 (77%)
+    mfr             47/47 (100%)
+    finish          47/47 (100%)
+  mfr+finish both right 38/38 (100%)   swapped: 0
+  guessed qty (blank in PDF, number in output): 0 of 13 blank
+  notes (free text, not in main accuracy) 36/47 (77%)
+  mismatches:
+    set 2.5 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 6.0 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 6.0 'Surface Closer' catalog_number: expected 'R 7500/ PR7500', got 'R 7500/ PR7500 (as required)'
+    set 12.0 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 12.0 'Surface Closer' catalog_number: expected 'R 7500/ PR7500', got 'R 7500/ PR7500 (as required)'
+    set 18.0 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 24.0 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 28.0 'Stop' catalog_number: expected 'RM860 / 446 / 9-ADJ Series', got 'RM860 / 446 / 9-ADJ Series Per Conditions'
+    set 28.0 'Constant Latching Flush Bolt' catalog_number: expected '2845/ 2945', got '2845/ 2945(as required)'
+    set 28.0 'Surface Closer' catalog_number: expected 'R 7500/ PR7500', got 'R 7500/ PR7500 (as required)'
+    set 28.0 'Coordinator x Filler Bar x Brackets' catalog_number: expected '2600 Series', got '2600 Series (Cutouts as Required)'
+  notes mismatches:
+    set 2.5 'Stop': expected 'Per Conditions', got None
+    set 6.0 'Stop': expected 'Per Conditions', got None
+    set 6.0 'Surface Closer': expected 'as required', got None
+    set 12.0 'Stop': expected 'Per Conditions', got None
+    set 12.0 'Surface Closer': expected 'as required', got None
+    set 18.0 'Stop': expected 'Per Conditions', got None
+    set 24.0 'Stop': expected 'Per Conditions', got None
+    set 28.0 'Stop': expected 'Per Conditions', got None
+    set 28.0 'Constant Latching Flush Bolt': expected 'as required', got None
+    set 28.0 'Surface Closer': expected 'as required', got None
+    set 28.0 'Coordinator x Filler Bar x Brackets': expected 'Cutouts as Required', got None
