@@ -18,7 +18,7 @@ Context decides, not individual values:
 
 import re
 from collections import Counter
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from statistics import median
 
 from extract.codes import Legend, classify, first_token
@@ -29,6 +29,9 @@ from extract.models import Component, HardwareSet
 # (centered names spread the most); separate columns are >= 41 pt apart.
 COLUMN_GAP = 20.0
 MIN_INFERRED_COLUMN = 2       # values needed before an unlabeled column is inferred
+# Only a column of codes or names ("MK", "VON DUPRIN") can be inferred as the other
+# kind; prose such as "By Fire Rated Door Manufacturer" is neither.
+MAX_INFERRED_WORDS = 2
 
 COLUMN_CONFIDENCE = 0.8       # value's own code was ambiguous/unknown; its column decided
 OVERRIDE_CONFIDENCE = 0.6     # value's own code said the opposite; its column won
@@ -53,7 +56,13 @@ class Column:
     word: int
     xs: list[float]
     votes: Counter
+    values: list[str] = field(default_factory=list)
     label: str | None = None
+
+    @property
+    def code_like(self) -> bool:
+        short = sum(len(v.split()) <= MAX_INFERRED_WORDS for v in self.values)
+        return short * 2 > len(self.values)
 
     @property
     def x(self) -> float:
@@ -90,6 +99,7 @@ def find_columns(points: list[Point]) -> list[Column]:
             last.xs.append(p.x)
         else:
             columns.append(Column(p.word, [p.x], Counter()))
+        columns[-1].values.append(p.value)
         if p.kind in FIELDS:
             columns[-1].votes[p.kind] += 1
     return columns
@@ -103,7 +113,8 @@ def label_columns(columns: list[Column], fallback: list[Column] | None = None) -
         elif fallback and (near := column_of(col.x, col.word, fallback)):
             col.label = near.label
     kinds = {c.label for c in columns if c.label}
-    unlabeled = [c for c in columns if not c.label and len(c.xs) >= MIN_INFERRED_COLUMN]
+    unlabeled = [c for c in columns
+                 if not c.label and len(c.xs) >= MIN_INFERRED_COLUMN and c.code_like]
     if len(kinds) == 1 and unlabeled:
         max(unlabeled, key=lambda c: len(c.xs)).label = OTHER[kinds.pop()]
 
