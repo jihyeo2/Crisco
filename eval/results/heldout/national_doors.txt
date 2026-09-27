@@ -1,4 +1,4 @@
-== 15e2b8ac-FS17_Specs_V1.pdf  [UNREVIEWED DRAFT]
+== 15e2b8ac-FS17_Specs_V1.pdf
   set recall      15/15 (100%)
   set precision   15/15 (100%)
   scored sets     4
