@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pymupdf
 
-from extract.assemble import assemble
+from extract.assemble import assemble, strip_mfr_prefix
 from extract.codes import find_legend
 from extract.lines import Line, extract_page_lines
 from extract.llm import ExtractionError, LLMChunkResult, Usage, extract_chunk, make_client
@@ -58,5 +58,6 @@ def run(pdf_path: Path, pages: list[int] | None = None,
     sets, warnings = assemble([(lines, answer) for lines, answer, _ in results])
     by_id = {line.id: line for ls in lines_by_page.values() for line in ls}
     sets, resolve_warnings = resolve_mfr_finish(sets, by_id, legend)
+    sets = strip_mfr_prefix(sets)
     warnings = [f"chunk failed: {f}" for f in failures] + warnings + resolve_warnings
     return ExtractionResult(source_pdf=str(pdf_path), sets=sets), warnings, total

@@ -1,7 +1,7 @@
-from extract.assemble import assemble
+from extract.assemble import assemble, strip_mfr_prefix
 from extract.lines import Line
 from extract.llm import LLMChunkResult, LLMComponent, LLMSet
-from extract.models import SetStatus
+from extract.models import Component, HardwareSet, SetStatus
 
 
 def line(page, idx, y, text, x0=74.0, x1=300.0):
@@ -98,3 +98,14 @@ def test_unknown_rows_already_covered_by_a_named_set_are_dropped():
     second = (PAGE41, [hwset("UNKNOWN", [], [comp(["p41_L001", "p41_L002"], desc="Stop")])])
     sets, _ = run(first, second)
     assert [s.set_number for s in sets] == ["12.0"]
+
+
+def test_strip_mfr_prefix_only_removes_the_repeated_manufacturer():
+    def one(mfr, cat):
+        s = HardwareSet(set_number="1", components=[Component(description="x", mfr=mfr, catalog_number=cat)])
+        return strip_mfr_prefix([s])[0].components[0].catalog_number
+    assert one("IVES", 'IVES - 5BB1 4.5" x 4.5"') == '5BB1 4.5" x 4.5"'
+    assert one("VON DUPRIN", "von duprin \u2013 6200 SERIES") == "6200 SERIES"
+    assert one("LCN", "4040XP - EDA ARM") == "4040XP - EDA ARM"      # no prefix: untouched
+    assert one("IVES", "IVESTON - 1") == "IVESTON - 1"              # mfr must be the whole prefix
+    assert one(None, "IVES - 5BB1") == "IVES - 5BB1"                # no mfr: untouched
