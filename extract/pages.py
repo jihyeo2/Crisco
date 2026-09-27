@@ -34,6 +34,10 @@ CHUNK_MAX_LINES = 900
 CHUNK_OVERLAP = 1
 # Header pages at most this many pages apart are treated as one block, so the
 # pages between them (long sets, header-less continuation pages) are kept.
+# Measured across 44 specbooks: gaps inside a set block are <=3 (e.g. HFH p121-122,
+# a blank page then a header-less continuation); the smallest gap between
+# unrelated hits is 9. Any value 3-8 selects the same pages; 3 is the most
+# conservative.
 MAX_GAP = 3
 
 
