@@ -1,4 +1,4 @@
-from extract.evaluate import evaluate, match_components, norm
+from extract.evaluate import evaluate, match_components, norm, norm_notes
 
 
 def c(qty, desc, cat=None, mfr=None, finish=None):
@@ -76,3 +76,10 @@ def test_notes_scored_separately_from_main_accuracy():
     assert (r.notes_correct, r.notes_total) == (0, 1)
     assert r.main_correct == 5            # all five main fields right despite the notes
     assert r.mismatches == [] and len(r.notes_mismatches) == 1
+
+
+def test_notes_ignore_surrounding_parentheses_only():
+    assert norm_notes("(as required)") == norm_notes("as required")
+    assert norm_notes("(Cutouts as Required)") == norm_notes("Cutouts as Required")
+    assert norm_notes("(BY OTHERS); PREP") != norm_notes("BY OTHERS; PREP")  # not wrapped
+    assert norm_notes(None) is None

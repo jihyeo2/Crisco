@@ -29,7 +29,7 @@
         {"qty": 1, "description": "PANIC HARDWARE", "catalog_number": "35A MORTISE DEVICE, CONCEALED VERTICAL RODS, QUIET ELECTRIC LATCH RETRACTION, 18 LEVER, L ESCUTCHEON, HARDWIRED ALARM KIT W/ POWER SUPPLY - FSIC PRIMUS", "mfr": "VON DUPRIN", "finish": "613 (OIL RUBBED BRONZE)", "notes": "PANIC / CLASSROOM FUNCTION; COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
         {"qty": 1, "description": "SURFACE CLOSER", "catalog_number": "4040XP - EDA ARM - METAL COVER", "mfr": "LCN", "finish": "691 (LIGHT BRONZE)", "notes": "EXTRA DUTY ARM, METAL COVER"},
         {"qty": null, "description": "SILENCERS", "catalog_number": "SILENCER SI6X", "mfr": "IVES", "finish": "BLACK", "notes": "CONTRACTOR TO CONFIRM QUANTITIES"},
-        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC (BY OTHERS)", "mfr": null, "finish": null, "notes": "PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
+        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC", "mfr": null, "finish": null, "notes": "(BY OTHERS); PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
       ]
     },
     {
@@ -41,12 +41,12 @@
       "components": [
         {"qty": 2, "description": "MORTISE HINGE", "catalog_number": "5BB1 4.5\" x 4.5\"", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "FULL MORTISE, FIVE KNUCKLE BB HINGE"},
         {"qty": 1, "description": "HW MORTISE HINGE", "catalog_number": "5BB1HW 4.5\" x 4.5\"", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
-        {"qty": 1, "description": "MORTISE LOCKSET ELEC. UNLOCKING", "catalog_number": "L9092EU, 18 LEVER, A ROSE, 10-072 STRIKE - FSIC PRIMUS", "mfr": "SCHLAGE", "finish": "613 (OIL RUBBED BRONZE)", "notes": "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
+        {"qty": 1, "description": "MORTISE LOCKSET ELEC. UNLOCKING", "catalog_number": "L9092EU, 18 LEVER, A ROSE, 10-072 STRIKE - FSIC PRIMUS", "mfr": "SCHLAGE", "finish": "613 (OIL RUBBED BRONZE)", "notes": "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECURITY VENDOR"},
         {"qty": 1, "description": "SURFACE CLOSER", "catalog_number": "4040XP - HEDA ARM - METAL COVER", "mfr": "LCN", "finish": "691 (LIGHT BRONZE)", "notes": "EXTRA DUTY ARM W/ HOLD OPEN, METAL COVER"},
         {"qty": 1, "description": "WALL STOP", "catalog_number": "WS401/402CCV", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "SEE PLANS FOR WALL CONSTRUCTION"},
         {"qty": 1, "description": "MORTISE AUTO. DOOR BOTTOM", "catalog_number": "225S", "mfr": "NGP", "finish": "MILL ALUM / BLACK", "notes": null},
         {"qty": null, "description": "SILENCERS", "catalog_number": "SILENCER SI6X", "mfr": "IVES", "finish": "BLACK", "notes": "CONTRACTOR TO CONFIRM QUANTITIES"},
-        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC (BY OTHERS)", "mfr": null, "finish": null, "notes": "PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
+        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC", "mfr": null, "finish": null, "notes": "(BY OTHERS); PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
       ]
     },
     {
@@ -57,12 +57,12 @@
       "review_notes": "Verified against source. '--' qty -> null. Lockset description wraps. Floor stop has no note. Door access row: mfr null (by others).",
       "components": [
         {"qty": 2, "description": "MORTISE HINGE", "catalog_number": "5BB1 4.5\" x 4.5\"", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "FULL MORTISE, FIVE KNUCKLE BB HINGE"},
-        {"qty": 1, "description": "HW MORTISE HINGE", "catalog_number": "5BB1HW 4.5\" x 4.5\"", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "COORDINATE W/ OWNER'S SECURITY VENDOR"},
+        {"qty": 1, "description": "HW MORTISE HINGE", "catalog_number": "5BB1HW 4.5\" x 4.5\"", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
         {"qty": 1, "description": "MORTISE LOCKSET ELEC. UNLOCKING", "catalog_number": "L9092EU, 18 LEVER, A ROSE, 10-072 STRIKE - FSIC PRIMUS", "mfr": "SCHLAGE", "finish": "613 (OIL RUBBED BRONZE)", "notes": "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECURITY VENDOR"},
-        {"qty": 1, "description": "AUTO OPERATOR", "catalog_number": "SW100", "mfr": "ASSA ABLOY", "finish": "691 (LIGHT BRONZE)", "notes": "COORDINATE W/ OWNER'S SECURITY VENDOR"},
+        {"qty": 1, "description": "AUTO OPERATOR", "catalog_number": "SW100", "mfr": "ASSA ABLOY", "finish": "691 (LIGHT BRONZE)", "notes": "COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
         {"qty": 1, "description": "FLOOR STOP", "catalog_number": "446", "mfr": "ROCKWOOD", "finish": "613 (OIL RUBBED BRONZE)", "notes": null},
         {"qty": null, "description": "SILENCERS", "catalog_number": "SILENCER SI6X", "mfr": "IVES", "finish": "BLACK", "notes": "CONTRACTOR TO CONFIRM QUANTITIES"},
-        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC (BY OTHERS)", "mfr": null, "finish": null, "notes": "PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
+        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC", "mfr": null, "finish": null, "notes": "(BY OTHERS); PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
       ]
     },
     {
@@ -93,7 +93,7 @@
         {"qty": 1, "description": "MORTISE LOCKSET ELEC. UNLOCKING", "catalog_number": "L9092EU, 18 LEVER, A ROSE, 10-072 STRIKE - FSIC PRIMUS", "mfr": "SCHLAGE", "finish": "613 (OIL RUBBED BRONZE)", "notes": "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECURITY VENDOR"},
         {"qty": 1, "description": "WALL STOP", "catalog_number": "WS401/402CCV", "mfr": "IVES", "finish": "613 (OIL RUBBED BRONZE)", "notes": "SEE PLANS FOR WALL CONSTRUCTION"},
         {"qty": null, "description": "SILENCERS", "catalog_number": "SILENCER SI6X", "mfr": "IVES", "finish": "BLACK", "notes": "CONTRACTOR TO CONFIRM QUANTITIES"},
-        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC (BY OTHERS)", "mfr": null, "finish": null, "notes": "PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
+        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC", "mfr": null, "finish": null, "notes": "(BY OTHERS); PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
       ]
     },
     {
@@ -108,7 +108,7 @@
         {"qty": 1, "description": "OH CLOSER", "catalog_number": "CONCEALED OVERHEAD CLOSER", "mfr": "CRL", "finish": "613 (OIL RUBBED BRONZE)", "notes": null},
         {"qty": 1, "description": "ELECTRIC STRIKE", "catalog_number": "6200 SERIES", "mfr": "VON DUPRIN", "finish": "613 (OIL RUBBED BRONZE)", "notes": "COORDINATE W/ OWNER'S SECUIRTY VENDOR"},
         {"qty": 1, "description": "FLOOR STOP", "catalog_number": "446", "mfr": "ROCKWOOD", "finish": "613 (OIL RUBBED BRONZE)", "notes": null},
-        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC (BY OTHERS)", "mfr": null, "finish": null, "notes": "PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
+        {"qty": null, "description": "DOOR ACCESS CONTROL DEVICES", "catalog_number": "CARD READER / DPS / POWER SUPPLY / ETC", "mfr": null, "finish": null, "notes": "(BY OTHERS); PREP/ROUGH-IN DOORS & FRAMES FOR DEVICES TO BE PROVIDED & INSTALLED BY OWNER'S SECURITY VENDOR"}
       ]
     },
     {

@@ -36,6 +36,16 @@ def norm(value) -> str | None:
     return re.sub(r"\s+", "", text)
 
 
+def norm_notes(value) -> str | None:
+    """Like norm(), but parentheses wrapped around the whole note are ignored:
+    "(as required)" and "as required" are the same note."""
+    if isinstance(value, str):
+        text = value.strip()
+        if text.startswith("(") and text.endswith(")"):
+            value = text[1:-1]
+    return norm(value)
+
+
 def tokens(comp: dict) -> set[str]:
     text = f"{comp.get('description') or ''} {comp.get('catalog_number') or ''}".upper()
     return set(re.findall(r"[A-Z0-9]+", text))
@@ -164,7 +174,7 @@ def evaluate(output: dict, truth: dict, include_unreviewed: bool = False) -> Rep
                         f"expected {t.get(f)!r}, got {p.get(f)!r}")
             if "notes" in t:  # only rows whose ground truth records notes
                 report.notes_total += 1
-                if norm(t["notes"]) == norm(p.get("notes")):
+                if norm_notes(t["notes"]) == norm_notes(p.get("notes")):
                     report.notes_correct += 1
                 else:
                     report.notes_mismatches.append(

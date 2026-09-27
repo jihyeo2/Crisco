@@ -12,10 +12,4 @@
     finish          47/47 (100%)
   mfr+finish both right 38/38 (100%)   swapped: 0
   guessed qty (blank in PDF, number in output): 0 of 13 blank
-  notes (free text, not in main accuracy) 42/47 (89%)
-  notes mismatches:
-    set 6.0 'Surface Closer': expected 'as required', got '(as required)'
-    set 12.0 'Surface Closer': expected 'as required', got '(as required)'
-    set 28.0 'Surface Closer': expected 'as required', got '(as required)'
-    set 28.0 'Coordinator x Filler Bar x Brackets': expected 'Cutouts as Required', got '(Cutouts as Required)'
-    set 28.0 'Constant Latching Flush Bolt': expected 'as required', got '(as required)'
+  notes (free text, not in main accuracy) 47/47 (100%)
