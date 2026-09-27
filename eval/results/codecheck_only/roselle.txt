@@ -1,0 +1,28 @@
+== 087100_FL_-_Door_Hardware_IFB_REVISED.pdf
+  set recall      33/33 (100%)
+  set precision   33/33 (100%)
+  scored sets     8
+  component recall    45/45 (100%)
+  component precision 45/47 (96%)
+  main accuracy   220/225 (98%)   (qty, description, catalog_number, mfr, finish)
+    qty             45/45 (100%)
+    description     40/45 (89%)
+    catalog_number  45/45 (100%)
+    mfr             45/45 (100%)
+    finish          45/45 (100%)
+  mfr+finish both right 40/40 (100%)   swapped: 0
+  guessed qty (blank in PDF, number in output): 0 of 11 blank
+  notes (free text, not in main accuracy) 41/45 (91%)
+  mismatches:
+    set 2.4 'DOOR ACCESS CONTROL DEVICES' description: expected 'DOOR ACCESS CONTROL DEVICES', got 'CARD READER / DOOR ACCESS CONTROL DEVICES'
+    set 3.2 'DOOR ACCESS CONTROL DEVICES' description: expected 'DOOR ACCESS CONTROL DEVICES', got 'CARD READER / DOOR ACCESS CONTROL DEVICES'
+    set 3.4 'DOOR ACCESS CONTROL DEVICES' description: expected 'DOOR ACCESS CONTROL DEVICES', got 'CARD READER / DOOR ACCESS CONTROL DEVICES'
+    set 5.1 extra row: 'NOTE'
+    set 5.1 'DOOR ACCESS CONTROL DEVICES' description: expected 'DOOR ACCESS CONTROL DEVICES', got 'CARD READER CONTROL DEVICES'
+    set 7.3 extra row: 'NOTE'
+    set 7.3 'DOOR ACCESS CONTROL DEVICES' description: expected 'DOOR ACCESS CONTROL DEVICES', got 'CARD READER CONTROL DEVICES'
+  notes mismatches:
+    set 1.1 'CYLINDER / CORE': expected None, got 'COORDINATE W/ SLIDING AUTO ENTRANCE MFR.'
+    set 3.2 'MORTISE LOCKSET ELEC. UNLOCKING': expected "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECUIRTY VENDOR", got "ELECTRIC UNLOCKING FUNCTION; COORDINATE W/ OWNER'S SECURITY VENDOR"
+    set 3.4 'AUTO OPERATOR': expected "COORDINATE W/ OWNER'S SECURITY VENDOR", got "COORDINATE W/ OWNER'S SECUIRTY VENDOR"
+    set 3.4 'HW MORTISE HINGE': expected "COORDINATE W/ OWNER'S SECURITY VENDOR", got "COORDINATE W/ OWNER'S SECUIRTY VENDOR"
