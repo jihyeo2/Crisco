@@ -60,10 +60,23 @@ def test_chunks_respect_size_overlap_and_runs():
     assert chunk_pages([], size=4, overlap=1) == []
 
 
-def test_line_ids_and_prompt_format():
+def test_chunks_respect_line_budget():
+    dense = {15: 384, 16: 428, 17: 381}
+    assert chunk_pages([15, 16, 17], dense, max_lines=800) == [[15], [16], [17]]
+    assert chunk_pages([15, 16, 17], dense, max_lines=900) == [[15, 16], [16, 17]]
+    # one oversized page still gets a chunk, and chunking always moves forward
+    assert chunk_pages([5, 6], {5: 2000, 6: 10}, max_lines=800) == [[5], [6]]
+
+
+def test_line_ids_and_prompt_format_groups_rows():
     assert line_id(40, 12) == "p40_L012"
-    lines = [Line("p40_L001", 40, (286.0, 112.0, 329.0, 123.0), "Set: 12.0"),
-             Line("p41_L001", 41, (74.0, 90.0, 152.0, 101.0), "1 Stop")]
+    lines = [Line("p16_L002", 16, (200.0, 184.5, 260.0, 195.0), "IVES - 5BB1"),
+             Line("p16_L001", 16, (74.0, 184.0, 150.0, 195.0), "MORTISE HINGE"),
+             Line("p16_L003", 16, (74.0, 200.0, 150.0, 211.0), "WALL STOP"),
+             Line("p17_L001", 17, (74.0, 90.0, 152.0, 101.0), "1 Stop")]
     assert format_for_prompt(lines) == (
-        "=== PAGE 40 ===\np40_L001  x=286 y=112  Set: 12.0\n"
-        "=== PAGE 41 ===\np41_L001  x=74 y=90  1 Stop")
+        "=== PAGE 16 ===\n"
+        "[p16_L001 x=74] MORTISE HINGE | [p16_L002 x=200] IVES - 5BB1\n"
+        "[p16_L003 x=74] WALL STOP\n"
+        "=== PAGE 17 ===\n"
+        "[p17_L001 x=74] 1 Stop")

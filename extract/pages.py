@@ -27,6 +27,10 @@ SCHEDULE_TITLE = re.compile(r"HARDWARE\s+SCHEDULE", re.IGNORECASE)
 SET_COLUMN = re.compile(r"^\s*SET\s*$", re.IGNORECASE | re.MULTILINE)
 
 CHUNK_PAGES = 4
+# Dense tabular pages hold ~400 lines each; capping lines keeps each answer short
+# enough to finish (a 1,200-line chunk overflowed the output limit). 900 still lets
+# two dense pages share a chunk, so table rows that cross a page keep their set.
+CHUNK_MAX_LINES = 900
 CHUNK_OVERLAP = 1
 # Header pages at most this many pages apart are treated as one block, so the
 # pages between them (long sets, header-less continuation pages) are kept.
@@ -60,14 +64,17 @@ def select_pages(doc: pymupdf.Document) -> list[int]:
     return expand_hits(hits, doc.page_count)
 
 
-def chunk_pages(pages: list[int], size: int = CHUNK_PAGES,
+def chunk_pages(pages: list[int], line_counts: dict[int, int] | None = None,
+                size: int = CHUNK_PAGES, max_lines: int = CHUNK_MAX_LINES,
                 overlap: int = CHUNK_OVERLAP) -> list[list[int]]:
-    """Split consecutive runs of pages into chunks of at most `size` pages.
+    """Split consecutive runs of pages into chunks of at most `size` pages and
+    `max_lines` text lines (a single page over the limit still gets its own chunk).
 
     Within a run, neighbouring chunks share `overlap` page(s) so a set crossing a
     chunk boundary is seen whole at least once; duplicates are merged later.
     Separate runs never share a chunk.
     """
+    counts = line_counts or {}
     runs: list[list[int]] = []
     for p in pages:
         if runs and p == runs[-1][-1] + 1:
@@ -75,15 +82,21 @@ def chunk_pages(pages: list[int], size: int = CHUNK_PAGES,
         else:
             runs.append([p])
 
-    step = size - overlap
     chunks = []
     for run in runs:
         start = 0
         while True:
-            chunks.append(run[start:start + size])
-            if start + size >= len(run):
+            end, lines = start, 0
+            while end < len(run) and end - start < size:
+                lines += counts.get(run[end], 0)
+                if end > start and lines > max_lines:
+                    break
+                end += 1
+            chunks.append(run[start:end])
+            if end >= len(run):
                 break
-            start += step
+            # step back for overlap, but always move forward
+            start = max(end - overlap, start + 1)
     return chunks
 
 

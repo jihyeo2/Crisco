@@ -1,33 +1,55 @@
 """PDF -> ExtractionResult: select pages, chunk, ask Claude per chunk, assemble."""
 
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pymupdf
 
 from extract.assemble import assemble
-from extract.lines import extract_lines
-from extract.llm import extract_chunk, make_client
+from extract.lines import Line, extract_page_lines
+from extract.llm import ExtractionError, LLMChunkResult, Usage, extract_chunk, make_client
 from extract.models import ExtractionResult
 from extract.pages import chunk_pages, select_pages
 
+# Chunks sent to the API at once. The SDK retries rate limits (429) itself.
+MAX_PARALLEL = 4
+
 
 def run(pdf_path: Path, pages: list[int] | None = None,
-        log=lambda msg: print(msg, file=sys.stderr)) -> tuple[ExtractionResult, list[str]]:
+        log=lambda msg: print(msg, file=sys.stderr)) -> tuple[ExtractionResult, list[str], Usage]:
     """Extract hardware sets. `pages` overrides automatic page selection."""
     client = make_client()
     with pymupdf.open(pdf_path) as doc:
         selected = pages or select_pages(doc)
-        chunks = chunk_pages(selected)
-        log(f"{pdf_path.name}: {len(selected)} pages in {len(chunks)} chunks")
+        lines_by_page = {p: extract_page_lines(doc[p - 1]) for p in selected}
+    counts = {p: len(ls) for p, ls in lines_by_page.items()}
+    chunks = [c for c in chunk_pages(selected, counts) if any(counts[p] for p in c)]
+    log(f"{pdf_path.name}: {len(selected)} pages in {len(chunks)} chunks")
 
-        results = []
-        for n, chunk in enumerate(chunks, 1):
-            lines = extract_lines(doc, chunk)
-            if not lines:
-                continue
-            log(f"  chunk {n}/{len(chunks)}: pages {chunk[0]}-{chunk[-1]} ({len(lines)} lines)")
-            results.append((lines, extract_chunk(client, lines)))
+    failures: list[str] = []
 
-    sets, warnings = assemble(results)
-    return ExtractionResult(source_pdf=str(pdf_path), sets=sets), warnings
+    def call(chunk: list[int]) -> list[tuple[list[Line], LLMChunkResult, Usage]]:
+        lines = [line for p in chunk for line in lines_by_page[p]]
+        try:
+            answer, usage = extract_chunk(client, lines)
+        except ExtractionError as e:
+            if len(chunk) == 1:
+                failures.append(str(e))
+                log(f"  FAILED {e}")
+                return []
+            # Too much for one answer: retry page by page (loses the overlap context).
+            log(f"  pages {chunk[0]}-{chunk[-1]} failed ({e}); retrying one page at a time")
+            return [r for p in chunk for r in call([p])]
+        log(f"  pages {chunk[0]}-{chunk[-1]}: {len(answer.sets)} sets "
+            f"({usage.input_tokens} in / {usage.output_tokens} out tokens)")
+        return [(lines, answer, usage)]
+
+    # map() keeps chunk order, which assembly relies on.
+    with ThreadPoolExecutor(MAX_PARALLEL) as pool:
+        results = [r for rs in pool.map(call, chunks) for r in rs]
+
+    total = sum((usage for *_, usage in results), Usage())
+    sets, warnings = assemble([(lines, answer) for lines, answer, _ in results])
+    warnings = [f"chunk failed: {f}" for f in failures] + warnings
+    return ExtractionResult(source_pdf=str(pdf_path), sets=sets), warnings, total

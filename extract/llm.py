@@ -4,18 +4,23 @@ The model sees lines as `p40_L012  x=74 y=184  1 Surface Closer` and answers in 
 strict JSON schema that holds values and line IDs only, never coordinates.
 """
 
+from dataclasses import dataclass
 from typing import Literal
 
 import anthropic
 from dotenv import load_dotenv
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 from extract.lines import Line, format_for_prompt
 
 MODEL = "claude-sonnet-5"
+# USD per million tokens for MODEL, used for the cost line in run summaries.
+PRICE_PER_MTOK = {"input": 2.00, "output": 10.00}
 # Thinking depth / token spend. Tune against the eval (step 5).
 EFFORT = "medium"
-MAX_TOKENS = 16000
+# Dense tabular schedules produce long answers (a 3-page table overflowed 16k), so
+# stream with a high ceiling; streaming avoids HTTP timeouts on long outputs.
+MAX_TOKENS = 64000
 
 SYSTEM_PROMPT = """\
 You extract door hardware sets from construction specification pages for estimators.
@@ -81,27 +86,48 @@ class ExtractionError(RuntimeError):
     pass
 
 
+@dataclass
+class Usage:
+    input_tokens: int = 0
+    output_tokens: int = 0
+
+    def __add__(self, other: "Usage") -> "Usage":
+        return Usage(self.input_tokens + other.input_tokens,
+                     self.output_tokens + other.output_tokens)
+
+    @property
+    def cost_usd(self) -> float:
+        return (self.input_tokens * PRICE_PER_MTOK["input"]
+                + self.output_tokens * PRICE_PER_MTOK["output"]) / 1e6
+
+
 def make_client() -> anthropic.Anthropic:
     load_dotenv()
     return anthropic.Anthropic()
 
 
-def extract_chunk(client: anthropic.Anthropic, lines: list[Line]) -> LLMChunkResult:
-    response = client.messages.parse(
-        model=MODEL,
-        max_tokens=MAX_TOKENS,
-        system=SYSTEM_PROMPT,
-        output_config={"effort": EFFORT},
-        messages=[{"role": "user", "content": format_for_prompt(lines)}],
-        output_format=LLMChunkResult,
-    )
+def extract_chunk(client: anthropic.Anthropic, lines: list[Line]) -> tuple[LLMChunkResult, Usage]:
+    where = f"pages {lines[0].page}-{lines[-1].page}"
+    try:
+        with client.messages.stream(
+            model=MODEL,
+            max_tokens=MAX_TOKENS,
+            system=SYSTEM_PROMPT,
+            output_config={"effort": EFFORT},
+            messages=[{"role": "user", "content": format_for_prompt(lines)}],
+            output_format=LLMChunkResult,
+        ) as stream:
+            response = stream.get_final_message()
+    except ValidationError as e:
+        # The SDK parses the JSON as the text block closes; a cut-off answer lands here.
+        raise ExtractionError(f"invalid/truncated JSON for {where}: {e.errors()[0]['msg']}") from e
+    where += f" (message {response.id})"
     if response.stop_reason == "refusal":
-        raise ExtractionError(f"model refused chunk (request {response._request_id})")
+        raise ExtractionError(f"model refused {where}")
     if response.stop_reason == "max_tokens":
-        raise ExtractionError(
-            f"output hit max_tokens={MAX_TOKENS}; use smaller chunks "
-            f"(request {response._request_id})")
-    return response.parsed_output
+        raise ExtractionError(f"output hit max_tokens={MAX_TOKENS} on {where}; use smaller chunks")
+    usage = Usage(response.usage.input_tokens, response.usage.output_tokens)
+    return response.parsed_output, usage
 
 
 def count_chunk_tokens(client: anthropic.Anthropic, lines: list[Line]) -> int:
