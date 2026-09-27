@@ -1,13 +1,10 @@
-"""Tell manufacturer codes from finish codes using only the PDF being processed.
+"""Classify a single mfr/finish value, using only the PDF being processed.
 
-Evidence, most trusted first:
+These per-value classifications are votes: resolve.py labels each printed column
+by the majority of its values, and the column decides. Sources, most trusted first:
 1. The document's own legends ("Manufacturer's Abbreviations", "Hardware Finish
    List", ...), parsed from its text.
-2. A small seed of industry-standard codes: BHMA / US finish numbers (a published
-   standard, ANSI/BHMA A156.18) and widely used manufacturer names and 3-letter
-   abbreviations. Two-letter codes are left out on purpose: spec writers pick their
-   own (BE is Best in one spec, DO is Don Jo in another), so only a legend can say.
-3. Column position within the same set/document (see resolve.py).
+2. A small seed of general industry knowledge (see SEED_* below).
 
 Values are only classified here, never rewritten: output keeps what's printed.
 """
@@ -22,14 +19,22 @@ from extract.lines import extract_page_lines, group_rows
 
 Kind = Literal["mfr", "finish", "ambiguous", "unknown"]
 
+# Seed: only votes for labeling columns (resolve.py); a column's majority decides.
+# Kept to general industry knowledge, not names picked up from the sample specbooks,
+# so the eval (step 5) measures generalization rather than our own tuning.
+#
+# Manufacturers: widely used names and their conventional 3-letter abbreviations
+# (as in DHI "Abbreviations and Symbols"). No 2-letter codes: spec writers define
+# those themselves (BE = Best in one spec, DO = Don Jo in another).
 SEED_MFR = {
     "IVE", "IVES", "SCH", "SCE", "SCHLAGE", "VON", "VON DUPRIN", "LCN", "ZER", "ZERO",
     "SAR", "SARGENT", "GLY", "GLYNN-JOHNSON", "BES", "BEST", "HAG", "HAGER",
     "MCK", "MCKINNEY", "ROC", "ROCKWOOD", "PEM", "PEMKO", "NOR", "NORTON",
-    "TRI", "TRIMCO", "RIX", "RIXSON", "ADAMS RITE", "HES", "SELECT", "SECURITRON",
-    "ABH", "NGP", "DORMA", "MEDECO", "ASSA ABLOY", "ALLEGION", "YALE", "CORBIN RUSSWIN",
-    "STANLEY", "HAGER", "CRL", "BLUMCRAFT", "DON-JO", "COMMAND ACCESS",
+    "TRI", "TRIMCO", "RIX", "RIXSON", "ADAMS RITE", "HES", "SELECT",
+    "DORMA", "MEDECO", "ASSA ABLOY", "ALLEGION", "YALE", "CORBIN RUSSWIN", "STANLEY",
 }
+# Finishes: generic color/material words, plus the BHMA and US finish-code formats
+# from the published standard ANSI/BHMA A156.18 (same in every spec).
 SEED_FINISH_WORDS = {
     "BLACK", "BLK", "GREY", "GRAY", "GRY", "CLEAR", "CLR", "WHITE", "WHT",
     "MILL", "ALUM", "PRIME", "DKB", "BRONZE",
