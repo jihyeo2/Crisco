@@ -2,7 +2,8 @@
 
 Coordinates never come from the model: every set and component carries the IDs of
 the text lines it was read from (e.g. "p40_L012"), and our code turns those into
-page bounding boxes.
+page bounding boxes. A set's locations hold one bbox per page, the smallest
+rectangle around all of that set's lines on the page (its own plus its components').
 """
 
 import re
@@ -35,7 +36,10 @@ class SetStatus(str, Enum):
 
 
 class Location(BaseModel):
-    """Where (part of) a set sits on one page, in PDF points, origin top-left."""
+    """Where (part of) a set sits on one page, in PDF points, origin top-left.
+
+    Derived from line IDs, never supplied by the model.
+    """
 
     page: int = Field(ge=1)
     bbox: tuple[float, float, float, float]  # x0, y0, x1, y1
@@ -57,6 +61,7 @@ class Component(BaseModel):
     mfr: str | None = None
     finish: str | None = None
     notes: str | None = None
+    # Every line this component's values were read from.
     source_line_ids: list[LineId] = Field(default_factory=list)
     field_confidence: dict[ComponentField, Confidence] = Field(default_factory=dict)
 
@@ -65,8 +70,10 @@ class HardwareSet(BaseModel):
     set_number: str  # string: "12.0", "3.3", "HW-04" all occur
     description: str | None = None
     status: SetStatus = SetStatus.ACTIVE
+    # One per page the set appears on; computed from set + component line IDs.
     locations: list[Location] = Field(default_factory=list)
     components: list[Component] = Field(default_factory=list)
+    # Lines for the set's own fields: set number, description, NOT USED marker.
     source_line_ids: list[LineId] = Field(default_factory=list)
     confidence: Confidence = 1.0
 
