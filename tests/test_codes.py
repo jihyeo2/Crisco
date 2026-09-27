@@ -104,7 +104,7 @@ def test_undecidable_value_kept_and_flagged():
     assert (c.mfr, c.finish) == ("XQ", None) and c.field_confidence == {"mfr": 0.5}
 
 
-def test_values_sharing_one_line_use_character_position():
+def test_values_sharing_one_cell_are_separate_columns():
     # StarHardware prints "622 FH" in one cell: finish first, then mfr
     known = row(60, 1, 100, [(74, "Hinge"), (420, "622 IV")])
     odd = row(60, 3, 120, [(74, "Pivot"), (420, "622 FH")])
@@ -113,3 +113,43 @@ def test_values_sharing_one_line_use_character_position():
     s, _ = resolve_mfr_finish(s, {l.id: l for l in known + odd}, Legend(mfr={"IV": "Ives"}))
     c = s[0].components[1]
     assert (c.mfr, c.finish) == ("FH", "622")
+
+
+def test_column_context_overrides_the_value_itself():
+    # PE printed in a column of 626/630 is a finish here (Painted Enamel)
+    rows = [row(50, 1, 100, [(74, "Hinge"), (400, "626"), (450, "MK")]),
+            row(50, 4, 120, [(74, "Closer"), (400, "630"), (450, "LCN")]),
+            row(50, 7, 140, [(74, "Stop"), (400, "630"), (450, "RO")]),
+            row(50, 10, 160, [(74, "Plate"), (400, "PE"), (450, "RO")])]
+    comps = [comp(r, r[2].text, r[1].text, r[0].text) for r in rows]
+    comps[3] = comps[3].model_copy(update={"mfr": "PE", "finish": "RO"})  # model's swap
+    legend = Legend(mfr={"PE": "Pemko"})   # the legend says PE is Pemko...
+    s, warnings = resolve_mfr_finish([HardwareSet(set_number="1", components=comps)],
+                                     {l.id: l for r in rows for l in r}, legend)
+    plate = s[0].components[3]
+    assert (plate.mfr, plate.finish) == ("RO", "PE")   # ...but its column wins
+    assert plate.field_confidence["finish"] == 0.6
+    assert any("printed in the finish column" in w for w in warnings)
+
+
+def test_unrecognized_column_inferred_as_the_other_kind():
+    # no legend, 2-letter mfr codes: only the finish column has known codes
+    rows = [row(50, 1, 100, [(74, "Hinge"), (400, "626"), (450, "MK")]),
+            row(50, 4, 120, [(74, "Stop"), (400, "630"), (450, "RO")])]
+    comps = [comp(rows[0], "626", "MK", "Hinge"),        # model swapped this one
+             comp(rows[1], "RO", "630", "Stop")]
+    s, _ = resolve_mfr_finish([HardwareSet(set_number="1", components=comps)],
+                              {l.id: l for r in rows for l in r}, Legend())
+    assert [(c.mfr, c.finish) for c in s[0].components] == [("MK", "626"), ("RO", "630")]
+
+
+def test_stray_no_outside_any_column_is_not_forced():
+    rows = [row(50, 1, 100, [(74, "Hinge"), (400, "626"), (450, "IVE")]),
+            row(50, 4, 120, [(74, "Closer"), (400, "689"), (450, "LCN")]),
+            row(50, 7, 140, [(74, "Stop"), (250, "NO"), (450, "IVE")])]
+    comps = [comp(rows[0], "IVE", "626", "Hinge"), comp(rows[1], "LCN", "689", "Closer"),
+             comp(rows[2], "IVE", "NO", "Stop")]
+    s, _ = resolve_mfr_finish([HardwareSet(set_number="1", components=comps)],
+                              {l.id: l for r in rows for l in r}, Legend())
+    stop = s[0].components[2]
+    assert (stop.mfr, stop.finish) == ("IVE", "NO") and stop.field_confidence == {"finish": 0.5}
