@@ -1,0 +1,138 @@
+{
+  "source_pdf": "specbooks/JC Ryan 2/087100 - Door Hardware-6.pdf",
+  "pages": "24-46",
+  "all_set_numbers_reviewed": true,
+  "all_set_numbers": ["EX-1.0", "EX-2.0", "EX-3.0", "EX-4.0", "1.0", "2.0", "2.5", "3.0", "4.0", "4.5",
+                      "5.0", "5.5", "6.0", "7.0", "7.5", "8.0", "9.0", "9.5", "10.0", "11.0",
+                      "12.0", "13.0", "14.0", "15.0", "16.0", "16.5", "17.0", "18.0", "19.0", "20.0",
+                      "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0"],
+  "sets": [
+    {
+      "set_number": "EX-1.0",
+      "description": "Balanced Door Assembly Opening",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Rows marked 'By Balanced Door Manufacturer' have no catalog/mfr of their own: mfr null, the text goes in notes (not scored). 'Gasketing, threshold, sweep, astragal' is one printed row, so one component. Operation notes below the list are not components, so not extracted.",
+      "components": [
+        {"qty": null, "description": "Hanging Device", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Balanced Door Manufacturer"},
+        {"qty": null, "description": "Panic Hardware Device (Blumcraft Style)", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Balanced Door Manufacturer"},
+        {"qty": null, "description": "Gasketing, threshold, sweep, astragal", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Balanced Door Manufacturer"},
+        {"qty": 1, "description": "Electric Strike", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Balanced Door Manufacturer"}
+      ]
+    },
+    {
+      "set_number": "EX-2.0",
+      "description": "Terrace Door Assembly",
+      "status": "active",
+      "reviewed": false,
+      "review_notes": "Crosses p24 -> p25: the gasketing row is on p25. First two rows verified; gasketing row notes need checking on p25.",
+      "components": [
+        {"qty": null, "description": "Hanging Device", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Door Manufacturer"},
+        {"qty": null, "description": "Panic Hardware Device", "catalog_number": null, "mfr": null, "finish": null, "notes": "By Door Manufacturer"},
+        {"qty": null, "description": "Gasketing, threshold, sweep, astragal", "catalog_number": null, "mfr": null, "finish": null, "notes": null}
+      ]
+    },
+    {
+      "set_number": "2.5",
+      "description": "Single Opening – Access Controlled, Stairwell, Fail Secure",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Hinge has no printed qty. Door/Frame Harness has no catalog or mfr. Moved 'Per Conditions' from Stop catalog to notes. Operation notes are not components, not extracted.",
+      "components": [
+        {"qty": null, "description": "Hinge, Full Mortise", "catalog_number": "T4A3786", "mfr": "McKinney", "finish": null, "notes": null},
+        {"qty": 1, "description": "Electric Power Transfer", "catalog_number": "EL-CEPT", "mfr": "Securitron", "finish": null, "notes": null},
+        {"qty": 1, "description": "Fail Secure Exit Device, RX", "catalog_number": "[12] 55 PE8876 ETMI", "mfr": "Sargent", "finish": null, "notes": null},
+        {"qty": 1, "description": "Surface Closer (Mounted on stairwell side of door)", "catalog_number": "7500", "mfr": "Norton", "finish": null, "notes": null},
+        {"qty": 1, "description": "Kick Plate", "catalog_number": "K1050 x 10\" High x CSK x 4BE", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"},
+        {"qty": 1, "description": "Gasketing", "catalog_number": "S44BL", "mfr": "Pemko", "finish": null, "notes": null},
+        {"qty": 1, "description": "Door Sweep", "catalog_number": "315CN", "mfr": "Pemko", "finish": null, "notes": null},
+        {"qty": 1, "description": "Threshold", "catalog_number": "151A", "mfr": "Pemko", "finish": null, "notes": null},
+        {"qty": 1, "description": "Door/Frame Harness", "catalog_number": null, "mfr": null, "finish": null, "notes": null}
+      ]
+    },
+    {
+      "set_number": "6.0",
+      "description": "Classroom function with closer - single (Break Room, Locker Room, Tenant Entry)",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Hinge has no printed qty. Silencers: qty 3, no mfr printed. Moved '(as required)' and 'Per Conditions' to notes.",
+      "components": [
+        {"qty": null, "description": "Hinge, Full Mortise", "catalog_number": "TA2714", "mfr": "McKinney", "finish": null, "notes": null},
+        {"qty": 1, "description": "Classroom Lock", "catalog_number": "8237 LNMI", "mfr": "Sargent", "finish": null, "notes": null},
+        {"qty": 1, "description": "Surface Closer", "catalog_number": "R 7500/ PR7500", "mfr": "Norton", "finish": null, "notes": "as required"},
+        {"qty": 1, "description": "Kick Plate", "catalog_number": "K1050 x 10\" High x CSK x 4BE", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"},
+        {"qty": 3, "description": "Silencers", "catalog_number": "SR64/ SR65", "mfr": null, "finish": null, "notes": null}
+      ]
+    },
+    {
+      "set_number": "12.0",
+      "description": "Passage function with closer - single",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Hinge has no printed qty. Moved '(as required)' and 'Per Conditions' to notes.",
+      "components": [
+        {"qty": null, "description": "Hinge, Full Mortise", "catalog_number": "TA2714", "mfr": "McKinney", "finish": null, "notes": null},
+        {"qty": 1, "description": "Passage Latch", "catalog_number": "8215 LNMI", "mfr": "Sargent", "finish": null, "notes": null},
+        {"qty": 1, "description": "Surface Closer", "catalog_number": "R 7500/ PR7500", "mfr": "Norton", "finish": null, "notes": "as required"},
+        {"qty": 1, "description": "Kick Plate", "catalog_number": "K1050 x 10\" High x CSK x 4BE", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"},
+        {"qty": 1, "description": "Gasketing", "catalog_number": "S44BL", "mfr": "Pemko", "finish": null, "notes": null}
+      ]
+    },
+    {
+      "set_number": "15.0",
+      "description": "Con-Ed Opening",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. 'Notes: All hardware by door manufacturer.' -> no components.",
+      "components": []
+    },
+    {
+      "set_number": "18.0",
+      "description": "Single Opening - Office",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Pivot Set has no qty or catalog in source, kept null. Moved 'Per Conditions' from Stop catalog to notes.",
+      "components": [
+        {"qty": null, "description": "Pivot Set", "catalog_number": null, "mfr": "Rixson", "finish": null, "notes": null},
+        {"qty": 1, "description": "Locking Ladder Pull", "catalog_number": "LP3301 DBU", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"}
+      ]
+    },
+    {
+      "set_number": "24.0",
+      "description": "Single Opening – Closet",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Hinge and Silencers have no printed qty. Moved 'Per Conditions' to notes.",
+      "components": [
+        {"qty": null, "description": "Hinge, Full Mortise", "catalog_number": "TA2714", "mfr": "McKinney", "finish": null, "notes": null},
+        {"qty": 1, "description": "Classroom Lock", "catalog_number": "8237 LNMI", "mfr": "Sargent", "finish": null, "notes": null},
+        {"qty": 1, "description": "Kick Plate", "catalog_number": "K1050 x 10\" High x CSK x 4BE", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"},
+        {"qty": null, "description": "Silencers", "catalog_number": "608", "mfr": "Rockwood", "finish": null, "notes": null}
+      ]
+    },
+    {
+      "set_number": "28.0",
+      "description": "Corridor Pair",
+      "status": "active",
+      "reviewed": true,
+      "review_notes": "Verified against source. Last set of the section (p46). Hinge has no printed qty. Moved '(as required)', '(Cutouts as Required)' and 'Per Conditions' to notes.",
+      "components": [
+        {"qty": null, "description": "Hinge, Full Mortise", "catalog_number": "TA2714", "mfr": "McKinney", "finish": null, "notes": null},
+        {"qty": 1, "description": "Constant Latching Flush Bolt", "catalog_number": "2845/ 2945", "mfr": "Rockwood", "finish": null, "notes": "as required"},
+        {"qty": 1, "description": "Dust Proof Strike", "catalog_number": "570", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 1, "description": "Passage Set", "catalog_number": "8215 LNMI", "mfr": "Sargent", "finish": null, "notes": null},
+        {"qty": 1, "description": "Coordinator x Filler Bar x Brackets", "catalog_number": "2600 Series", "mfr": "Rockwood", "finish": null, "notes": "Cutouts as Required"},
+        {"qty": 2, "description": "Surface Closer", "catalog_number": "R 7500/ PR7500", "mfr": "Norton", "finish": null, "notes": "as required"},
+        {"qty": 2, "description": "Kick Plate", "catalog_number": "K1050 x 10\" High x CSK x 4BE", "mfr": "Rockwood", "finish": null, "notes": null},
+        {"qty": 2, "description": "Stop", "catalog_number": "RM860 / 446 / 9-ADJ Series", "mfr": "Rockwood", "finish": null, "notes": "Per Conditions"},
+        {"qty": 1, "description": "Gasketing", "catalog_number": "S88BL", "mfr": "Pemko", "finish": null, "notes": null},
+        {"qty": 1, "description": "Astragal", "catalog_number": "178SA", "mfr": "Pemko", "finish": null, "notes": null}
+      ]
+    }
+  ]
+}
