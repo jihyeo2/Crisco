@@ -2,4 +2,5 @@ pymupdf
 pydantic>=2
 anthropic
 python-dotenv
+streamlit
 pytest
