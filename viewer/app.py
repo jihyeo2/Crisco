@@ -32,12 +32,15 @@ def open_pdf(path: str) -> pymupdf.Document:
 
 def load_result() -> tuple[str, ExtractionResult] | None:
     st.sidebar.header("Output")
-    files = sorted(str(p.relative_to(ROOT)) for p in (ROOT / "out").rglob("*.json"))
+    # examples/ ships with the repo so the viewer works without running extraction
+    files = sorted(str(p.relative_to(ROOT)) for d in ("examples", "out")
+                   for p in (ROOT / d).rglob("*.json"))
     upload = st.sidebar.file_uploader("…or upload an output JSON", type="json")
     if upload is not None:
         return upload.name, ExtractionResult.model_validate_json(upload.getvalue())
     if not files:
-        st.info("No outputs under out/. Run `python -m extract <pdf> -o out/<name>.json` first.")
+        st.info("No outputs under examples/ or out/. "
+                "Run `python -m extract <pdf> -o out/<name>.json` first.")
         return None
     choice = st.sidebar.selectbox("Output JSON", files)
     return choice, ExtractionResult.model_validate_json((ROOT / choice).read_text())
