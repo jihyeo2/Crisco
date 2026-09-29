@@ -13,11 +13,12 @@ import pymupdf
 # A set header starts a line and is followed by a set number:
 #   "Set: 12.0", "Set #108", "Heading #4", "Hardware Group No. 09:",
 #   "HARDWARE GROUP NO. C201CW", "Hardware Group/Set #02.1", "HW SET 3", "Set: EX-1.0",
-#   "Hardware Groups/Set #10.1", "Hardware Group/Sets #102"
+#   "Hardware Groups/Set #10.1", "Hardware Group/Sets #102",
+#   "PART 18 - HARDWARE GROUP NO. 201C" (Vantage numbers every group as a PART)
 # The first letter must be a capital, so wrapped prose like `set 46" above floor`
 # doesn't count; the rest is case-insensitive.
 SET_HEADER = re.compile(
-    r"^(?=[A-Z])(?i:(?:HARDWARE\s+|HW\.?\s*)?(?:GROUPS?\s*/\s*SETS?|SETS?|GROUPS?|HEADING)"
+    r"^(?:PART\s+\d+\s*[-\u2013]\s*)?(?=[A-Z])(?i:(?:HARDWARE\s+|HW\.?\s*)?(?:GROUPS?\s*/\s*SETS?|SETS?|GROUPS?|HEADING)"
     r"\s*(?:NO\.?|NUMBER)?\s*[#:]?\s*[A-Z]{0,4}-?\d)",
     re.MULTILINE,
 )

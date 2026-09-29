@@ -106,18 +106,68 @@ Across all three: every set number found with no extras, and qty/mfr/finish 100%
 None of the 24 blank quantities in JC Ryan and Roselle was guessed. The held-out specbook was not used to write the prompt rules
 or the code seed, and uses short codes (`630 | IVE`, `626 | ADA`) with no legend.
 
+### Other runs (no ground truth, spot-checked against the PDF)
+
+| Specbook | Sets found | Checked | Cost |
+|---|---|---|---|
+| Lyons Township HS, 11 pages | 29 / 29 headers | all 4 **NOT USED** groups (05, 16, 21, 22) came out `not_used`; group 07 matches the PDF row for row | $0.43 |
+| Vantage TX-22, p389-392 | 9 / 9 headers | `PART 10 - HARDWARE GROUP NO. 103A` format; group 103A rows match except one (see limits) | $0.15 |
+
+### Coverage across the corpus
+
+Extracting every specbook wasn't in budget, so coverage was checked for free: for
+each specbook, page selection was compared with recon's keyword pages, and every
+dense run of keyword pages that selection skipped was read. That found one real miss,
+Vantage's `PART 18 - HARDWARE GROUP NO. 201C` headers (~30 pages), now fixed; the
+other skipped runs are submittal prose about the schedule.
+
+| Specbook | Pages selected | Set headers found* | Extracted |
+|---|---|---|---|
+| JC Ryan 087100 | 23 | 38 | 38/38 |
+| Roselle 087100 (table) | 3 | table, no headers | 33/33 |
+| National Doors | 8 | 15 | 15/15 |
+| Lyons Township HS | 11 | 29 | 29/29 |
+| Vantage TX-22 | 34 | 44 | 9/9 on p389-392 |
+| Gerrard (Hdw Spec & Sch) | 18 | 34 | — |
+| Bridgeport Hardware Schedule | 47 | 90 | — |
+| AMI Renovation | 24 | 44 | — |
+| HFH 08 71 00 | 165 | 190 | p40-42 only |
+| Livelle Vol 1 | 61 | 161 | — |
+| Morris Bank | 40 | 47 | p283-285 only |
+| SAT TDP | 133 | 181 | — |
+| StarHardware | 63 | 69 | — |
+| Valor Acres 087100 | 12 | 37 | — |
+| Village of Oswego | 29 | 39 | — |
+| Market View | 14 | 26 | — |
+| Forest Park | 4 | 1 real (`Set #1`) | — |
+| Shubie Center | 3 | 3 | — |
+| USI Radnet | 5 | 3 | — |
+
+\* Distinct header lines matched on the selected pages: an approximation, since a few
+matches are bolt-grade text ("Group 1 stainless-steel bolts") rather than sets.
+Not listed: SJC and Woodridge (no hardware sets), Bridgeport Rev_0 and Gerrard's
+architectural specs (duplicates of files above), HFH's door index (door → set
+numbers only), and door/frame/glazing sections (no sets).
+
 ## Cost
 
 Sonnet 5 ($2 / $10 per million tokens). A hardware section costs roughly
 $0.30-0.90: JC Ryan (23 pages) $0.78, Roselle (3 dense table pages) $0.89,
-National Doors (8 pages) $0.28. Most output tokens are the model's reasoning;
+National Doors (8 pages) $0.28, Lyons (11 pages) $0.43. Most output tokens are the model's reasoning;
 `EFFORT = "low"` in `extract/llm.py` is the next lever to try, measured with the eval.
 
 ## Known limits
 
 - **Scanned pages aren't read** (no OCR), e.g. Bridgeport Rev_0 p50-238.
-- **"By <supplier>" text** in a catalog column (National Doors `BY GATE MFG`) can stay
-  in catalog_number instead of notes; no prompt rule covers it yet.
+- **Instructions printed in the catalog column** can stay in catalog_number instead of
+  notes: National Doors `BY GATE MFG`, Vantage `COORDINATE WITH OWNER`. No prompt rule
+  covers them yet.
+- A door list can end up as the set description (Lyons group 29: "For use on Door #(s):
+  S8-1").
+- Only 5 specbooks have been extracted (API budget); the rest are covered by the free
+  header count above. Bolt-grade text ("Group 1 stainless-steel bolts") also matches
+  the header pattern and selects a few extra pages, which costs a little; whether those
+  pages produce false sets hasn't been checked.
 - **Not fully consistent across chunks:** Roselle's second chunk left "(BY OTHERS)" in
   the catalog where the first moved it to notes.
 - The last set of a block can lose rows if it runs more than one page past its header

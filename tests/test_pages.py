@@ -16,6 +16,7 @@ from extract.pages import chunk_pages, expand_hits, is_hardware_page
     "Set: EX-1.0",
     "Hardware Groups/Set #10.1",
     "Hardware Group/Sets #102",
+    "PART 18 - HARDWARE GROUP NO.  201C",
 ])
 def test_set_headers_select_page(header):
     assert is_hardware_page(f"DOOR HARDWARE\n{header}\n1 Surface Closer")
