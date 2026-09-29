@@ -17,10 +17,11 @@ import streamlit as st  # noqa: E402
 from pydantic import ValidationError  # noqa: E402
 
 from extract.models import ExtractionResult, SetStatus  # noqa: E402
-from viewer.render import (TABLE_COLUMNS, components_to_rows, line_boxes,  # noqa: E402
-                           render_page, rows_to_components)
+from viewer.render import (TABLE_COLUMNS, components_to_rows, focus_clip,  # noqa: E402
+                           line_boxes, render_page, rows_to_components, to_data_uri)
 
 st.set_page_config(page_title="Hardware Set Review", layout="wide")
+PAGE_BOX_HEIGHT = 820  # px; the page scrolls inside this box when zoomed
 
 
 # --- load ---------------------------------------------------------------------
@@ -126,8 +127,20 @@ with left:
     else:
         set_boxes = [loc.bbox for loc in hw.locations if loc.page == page]
         row_ids = hw.components[row_choice].source_line_ids if row_choice is not None else []
-        st.image(render_page(doc, page, set_boxes, line_boxes(doc, page, row_ids)),
-                 caption=f"Page {page} · blue = set, orange = selected component")
+        zoom_col, focus_col = st.columns([3, 2])
+        zoom = zoom_col.select_slider("Zoom", options=[1.0, 1.5, 2.0, 3.0], value=1.0,
+                                      format_func=lambda z: f"{z:.0%}")
+        focus = focus_col.toggle("Focus on set", value=False, disabled=not set_boxes)
+        clip = focus_clip(doc[page - 1].rect, set_boxes) if focus and set_boxes else None
+        image = render_page(doc, page, set_boxes, line_boxes(doc, page, row_ids), zoom, clip)
+        # A fixed-height box that scrolls both ways, so a zoomed page can be panned.
+        st.markdown(
+            f'<div style="height:{PAGE_BOX_HEIGHT}px; overflow:auto; '
+            f'border:1px solid rgba(128,128,128,.35); border-radius:4px">'
+            f'<img src="{to_data_uri(image)}" style="width:{zoom * 100:.0f}%; '
+            f'max-width:none; display:block"></div>', unsafe_allow_html=True)
+        st.caption(f"Page {page} · blue = set, orange = selected component"
+                   " · scroll inside the box to pan")
 
 # --- export -----------------------------------------------------------------------
 

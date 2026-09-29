@@ -1,5 +1,6 @@
 """Pure helpers for the viewer: page images with boxes, and table <-> model conversion."""
 
+import base64
 import io
 
 import pandas as pd
@@ -12,6 +13,7 @@ from extract.models import Component, HardwareSet
 RENDER_DPI = 110
 SET_COLOR = (37, 99, 235)       # blue: the set's location on this page
 ROW_COLOR = (234, 88, 12)       # orange: lines of the selected component
+FOCUS_MARGIN = 24             # points of page kept around a set in "focus" mode
 TABLE_COLUMNS = ["qty", "description", "catalog_number", "mfr", "finish", "notes"]
 
 
@@ -21,18 +23,33 @@ def line_boxes(doc: pymupdf.Document, page: int, line_ids: list[str]) -> list[tu
     return [line.bbox for line in extract_page_lines(doc[page - 1]) if line.id in wanted]
 
 
+def focus_clip(page_rect: pymupdf.Rect, boxes: list[tuple], margin: float = FOCUS_MARGIN) -> tuple:
+    """The region around the given boxes plus a margin, kept inside the page."""
+    x0 = min(b[0] for b in boxes) - margin
+    y0 = min(b[1] for b in boxes) - margin
+    x1 = max(b[2] for b in boxes) + margin
+    y1 = max(b[3] for b in boxes) + margin
+    return (max(x0, page_rect.x0), max(y0, page_rect.y0),
+            min(x1, page_rect.x1), min(y1, page_rect.y1))
+
+
 def render_page(doc: pymupdf.Document, page: int, set_boxes: list[tuple],
-                row_boxes: list[tuple] = ()) -> Image.Image:
-    """The page as an image, with set boxes (blue) and component line boxes (orange).
-    Boxes are in PDF points and are scaled to the render DPI here."""
-    pix = doc[page - 1].get_pixmap(dpi=RENDER_DPI)
+                row_boxes: list[tuple] = (), zoom: float = 1.0,
+                clip: tuple | None = None) -> Image.Image:
+    """The page (or the `clip` region of it, in PDF points) as an image, with set boxes
+    (blue) and component line boxes (orange). Rendered at RENDER_DPI * zoom so text
+    stays sharp when zoomed; boxes are in PDF points and are scaled/shifted here."""
+    scale = RENDER_DPI * zoom / 72   # pixels per PDF point
+    rect = pymupdf.Rect(clip) if clip else None
+    pix = doc[page - 1].get_pixmap(matrix=pymupdf.Matrix(scale, scale), clip=rect)
     image = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
     draw = ImageDraw.Draw(image)
-    scale = RENDER_DPI / 72
+    ox, oy = (rect.x0, rect.y0) if rect else (0, 0)
     for boxes, color, width, pad in ((set_boxes, SET_COLOR, 3, 4), (row_boxes, ROW_COLOR, 2, 1)):
         for x0, y0, x1, y1 in boxes:
-            draw.rectangle([(x0 - pad) * scale, (y0 - pad) * scale,
-                            (x1 + pad) * scale, (y1 + pad) * scale], outline=color, width=width)
+            draw.rectangle([(x0 - pad - ox) * scale, (y0 - pad - oy) * scale,
+                            (x1 + pad - ox) * scale, (y1 + pad - oy) * scale],
+                           outline=color, width=max(1, round(width * zoom)))
     return image
 
 
@@ -69,3 +86,10 @@ def rows_to_components(rows: list[dict], original: HardwareSet) -> list[Componen
         else:
             out.append(Component(**values))  # added by the reviewer: no source lines
     return out
+
+
+def to_data_uri(image: Image.Image) -> str:
+    """Inline JPEG for an <img> tag (smaller than PNG at high zoom)."""
+    buf = io.BytesIO()
+    image.save(buf, format="JPEG", quality=88)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
