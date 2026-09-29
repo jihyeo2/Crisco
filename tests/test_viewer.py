@@ -1,7 +1,7 @@
 import pymupdf
 
 from extract.models import Component, HardwareSet, Location
-from viewer.render import components_to_rows, render_page, rows_to_components
+from viewer.render import components_to_rows, focus_clip, render_page, rows_to_components, to_data_uri
 
 HW = HardwareSet(set_number="12.0", locations=[Location(page=1, bbox=(50, 50, 200, 120))], components=[
     Component(qty=None, description="Hinge", catalog_number="TA2714", mfr="McKinney",
@@ -38,3 +38,17 @@ def test_render_page_draws_boxes():
     plain = render_page(doc, 1, [])
     boxed = render_page(doc, 1, [(50, 50, 200, 120)], [(55, 70, 120, 85)])
     assert plain.size == boxed.size and plain.tobytes() != boxed.tobytes()
+
+
+def test_zoom_renders_larger_and_focus_crops_to_the_set():
+    doc = pymupdf.open()
+    doc.new_page(width=300, height=200).insert_text((60, 80), "Set: 12.0")
+    full = render_page(doc, 1, [(50, 50, 200, 120)])
+    zoomed = render_page(doc, 1, [(50, 50, 200, 120)], zoom=2.0)
+    assert abs(zoomed.size[0] - 2 * full.size[0]) <= 2   # pixel rounding
+    clip = focus_clip(doc[0].rect, [(50, 50, 200, 120)], margin=24)
+    assert clip == (26, 26, 224, 144)
+    cropped = render_page(doc, 1, [(50, 50, 200, 120)], clip=clip)
+    assert cropped.size[0] < full.size[0] and cropped.size[1] < full.size[1]
+    assert focus_clip(doc[0].rect, [(5, 5, 290, 195)], margin=24) == (0, 0, 300, 200)  # stays on page
+    assert to_data_uri(cropped).startswith("data:image/jpeg;base64,")
