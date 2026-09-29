@@ -1,0 +1,1156 @@
+{
+  "source_pdf": "specbooks/The Door Company _Copy_/Vantage TX-22 Div 01, 08.pdf",
+  "sets": [
+    {
+      "set_number": "103",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 389,
+          "bbox": [
+            72.0,
+            182.3,
+            535.3,
+            311.3
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L017",
+            "p389_L018",
+            "p389_L019",
+            "p389_L020",
+            "p389_L022",
+            "p389_L023"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "OFFICE/ENTRY LOCK",
+          "catalog_number": "L9050T 17L 09-544",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L024",
+            "p389_L025",
+            "p389_L026",
+            "p389_L027",
+            "p389_L029",
+            "p389_L030"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L031",
+            "p389_L032",
+            "p389_L033",
+            "p389_L034",
+            "p389_L035",
+            "p389_L036"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L037",
+            "p389_L038",
+            "p389_L039",
+            "p389_L040",
+            "p389_L042",
+            "p389_L043"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 3.0,
+          "description": "SILENCER",
+          "catalog_number": "SR64",
+          "mfr": "IVE",
+          "finish": "GRY",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L044",
+            "p389_L045",
+            "p389_L046",
+            "p389_L047",
+            "p389_L049",
+            "p389_L050"
+          ],
+          "field_confidence": {}
+        }
+      ],
+      "source_line_ids": [
+        "p389_L011",
+        "p389_L012"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "103A",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 389,
+          "bbox": [
+            72.0,
+            422.6,
+            535.3,
+            562.9
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L060",
+            "p389_L061",
+            "p389_L062",
+            "p389_L063",
+            "p389_L065",
+            "p389_L066"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "OFFICE/ENTRY LOCK",
+          "catalog_number": "L9050T 17L 09-544",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L067",
+            "p389_L068",
+            "p389_L069",
+            "p389_L070",
+            "p389_L072",
+            "p389_L073"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L074",
+            "p389_L075",
+            "p389_L076",
+            "p389_L077",
+            "p389_L078",
+            "p389_L079"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p389_L080",
+            "p389_L081",
+            "p389_L082",
+            "p389_L083",
+            "p389_L085",
+            "p389_L086"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": null,
+          "mfr": null,
+          "finish": null,
+          "notes": "BY DOOR/FRAME MANUFACTURER",
+          "source_line_ids": [
+            "p389_L087",
+            "p389_L088",
+            "p389_L089",
+            "p389_L090"
+          ],
+          "field_confidence": {
+            "description": 0.5,
+            "catalog_number": 0.5,
+            "notes": 0.5
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p389_L054",
+        "p389_L055"
+      ],
+      "confidence": 0.72
+    },
+    {
+      "set_number": "201",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 389,
+          "bbox": [
+            72.0,
+            674.3,
+            284.2,
+            686.7
+          ]
+        },
+        {
+          "page": 390,
+          "bbox": [
+            72.0,
+            72.3,
+            535.3,
+            191.6
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L012",
+            "p390_L013",
+            "p390_L014",
+            "p390_L015",
+            "p390_L017",
+            "p390_L018"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "STOREROOM LOCK",
+          "catalog_number": "L9080T 17L",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L019",
+            "p390_L020",
+            "p390_L021",
+            "p390_L022",
+            "p390_L024",
+            "p390_L025"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L026",
+            "p390_L027",
+            "p390_L028",
+            "p390_L029",
+            "p390_L030",
+            "p390_L031"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L032",
+            "p390_L033",
+            "p390_L034",
+            "p390_L035",
+            "p390_L037",
+            "p390_L038"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L039",
+            "p390_L040",
+            "p390_L041",
+            "p390_L042",
+            "p390_L044",
+            "p390_L045"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L046",
+            "p390_L047",
+            "p390_L048",
+            "p390_L049",
+            "p390_L051",
+            "p390_L052"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L053",
+            "p390_L054",
+            "p390_L055",
+            "p390_L056",
+            "p390_L058",
+            "p390_L059"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p389_L094",
+        "p390_L007"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "201C",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 390,
+          "bbox": [
+            72.0,
+            303.0,
+            535.3,
+            445.3
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L069",
+            "p390_L070",
+            "p390_L071",
+            "p390_L072",
+            "p390_L074",
+            "p390_L075"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "STOREROOM LOCK",
+          "catalog_number": "L9080T 17L",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L076",
+            "p390_L077",
+            "p390_L078",
+            "p390_L079",
+            "p390_L081",
+            "p390_L082"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L083",
+            "p390_L084",
+            "p390_L085",
+            "p390_L086",
+            "p390_L087",
+            "p390_L088"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L089",
+            "p390_L090",
+            "p390_L091",
+            "p390_L092",
+            "p390_L094",
+            "p390_L095"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L096",
+            "p390_L097",
+            "p390_L098",
+            "p390_L099",
+            "p390_L101",
+            "p390_L102"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p390_L103",
+            "p390_L104",
+            "p390_L105",
+            "p390_L106",
+            "p390_L108",
+            "p390_L109"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p390_L063",
+        "p390_L064"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "341",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 390,
+          "bbox": [
+            72.0,
+            556.7,
+            416.7,
+            605.7
+          ]
+        },
+        {
+          "page": 391,
+          "bbox": [
+            80.1,
+            86.9,
+            535.3,
+            190.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L011",
+            "p391_L012",
+            "p391_L013",
+            "p391_L014",
+            "p391_L016",
+            "p391_L017"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PRIVACY WITH INDICATOR",
+          "catalog_number": "L9056T 17N L583-363 OS-OCC",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L018",
+            "p391_L019",
+            "p391_L020",
+            "p391_L021",
+            "p391_L022",
+            "p391_L024",
+            "p391_L025"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L026",
+            "p391_L027",
+            "p391_L028",
+            "p391_L029",
+            "p391_L030",
+            "p391_L031"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L032",
+            "p391_L033",
+            "p391_L034",
+            "p391_L035",
+            "p391_L037",
+            "p391_L038"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L039",
+            "p391_L040",
+            "p391_L041",
+            "p391_L042",
+            "p391_L044",
+            "p391_L045"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L046",
+            "p391_L047",
+            "p391_L048",
+            "p391_L049",
+            "p391_L051",
+            "p391_L052"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L053",
+            "p391_L054",
+            "p391_L055",
+            "p391_L056",
+            "p391_L058",
+            "p391_L059"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p390_L113",
+        "p390_L114"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "341C",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 391,
+          "bbox": [
+            72.0,
+            301.8,
+            535.3,
+            469.2
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L069",
+            "p391_L070",
+            "p391_L071",
+            "p391_L072",
+            "p391_L074",
+            "p391_L075"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PRIVACY WITH INDICATOR",
+          "catalog_number": "L9056T 17N L583-363 OS-OCC",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L076",
+            "p391_L077",
+            "p391_L078",
+            "p391_L079",
+            "p391_L080",
+            "p391_L082",
+            "p391_L083"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L084",
+            "p391_L085",
+            "p391_L086",
+            "p391_L087",
+            "p391_L088",
+            "p391_L089"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L090",
+            "p391_L091",
+            "p391_L092",
+            "p391_L093",
+            "p391_L095",
+            "p391_L096"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L097",
+            "p391_L098",
+            "p391_L099",
+            "p391_L100",
+            "p391_L102",
+            "p391_L103"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L104",
+            "p391_L105",
+            "p391_L106",
+            "p391_L107",
+            "p391_L109",
+            "p391_L110"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p391_L111",
+            "p391_L112",
+            "p391_L113",
+            "p391_L114",
+            "p391_L116",
+            "p391_L117"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p391_L063",
+        "p391_L064"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "401",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 391,
+          "bbox": [
+            72.0,
+            580.6,
+            416.7,
+            629.5
+          ]
+        },
+        {
+          "page": 392,
+          "bbox": [
+            80.1,
+            86.9,
+            535.3,
+            165.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L011",
+            "p392_L012",
+            "p392_L013",
+            "p392_L014",
+            "p392_L016",
+            "p392_L017"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PASSAGE SET",
+          "catalog_number": "L9010 17L",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L018",
+            "p392_L019",
+            "p392_L020",
+            "p392_L021",
+            "p392_L023",
+            "p392_L024"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L025",
+            "p392_L026",
+            "p392_L027",
+            "p392_L028",
+            "p392_L030",
+            "p392_L031"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L032",
+            "p392_L033",
+            "p392_L034",
+            "p392_L035",
+            "p392_L037",
+            "p392_L038"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L039",
+            "p392_L040",
+            "p392_L041",
+            "p392_L042",
+            "p392_L044",
+            "p392_L045"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L046",
+            "p392_L047",
+            "p392_L048",
+            "p392_L049",
+            "p392_L051",
+            "p392_L052"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p391_L121",
+        "p391_L122"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "401C",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 392,
+          "bbox": [
+            72.0,
+            276.9,
+            531.3,
+            405.7
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L062",
+            "p392_L063",
+            "p392_L064",
+            "p392_L065",
+            "p392_L067",
+            "p392_L068"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PASSAGE SET",
+          "catalog_number": "L9010 17L",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L069",
+            "p392_L070",
+            "p392_L071",
+            "p392_L072",
+            "p392_L074",
+            "p392_L075"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L076",
+            "p392_L077",
+            "p392_L078",
+            "p392_L079",
+            "p392_L081",
+            "p392_L082"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L083",
+            "p392_L084",
+            "p392_L085",
+            "p392_L086",
+            "p392_L088",
+            "p392_L089"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L090",
+            "p392_L091",
+            "p392_L092",
+            "p392_L093",
+            "p392_L095",
+            "p392_L096"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p392_L056",
+        "p392_L057"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "503",
+      "description": "PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 392,
+          "bbox": [
+            72.0,
+            517.1,
+            531.3,
+            646.0
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1HW 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L106",
+            "p392_L107",
+            "p392_L108",
+            "p392_L109",
+            "p392_L111",
+            "p392_L112"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "CLASSROOM LOCK",
+          "catalog_number": "L9070T 17L",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L113",
+            "p392_L114",
+            "p392_L115",
+            "p392_L116",
+            "p392_L118",
+            "p392_L119"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PERMANENT CORE",
+          "catalog_number": "COORDINATE WITH OWNER",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L120",
+            "p392_L121",
+            "p392_L122",
+            "p392_L123",
+            "p392_L124",
+            "p392_L125"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CVX",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L126",
+            "p392_L127",
+            "p392_L128",
+            "p392_L129",
+            "p392_L131",
+            "p392_L132"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 3.0,
+          "description": "SILENCER",
+          "catalog_number": "SR64",
+          "mfr": "IVE",
+          "finish": "GRY",
+          "notes": null,
+          "source_line_ids": [
+            "p392_L133",
+            "p392_L134",
+            "p392_L135",
+            "p392_L136",
+            "p392_L138",
+            "p392_L139"
+          ],
+          "field_confidence": {}
+        }
+      ],
+      "source_line_ids": [
+        "p392_L100",
+        "p392_L101"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,2049 @@
+{
+  "source_pdf": "specbooks/National Doors and Hardware/15e2b8ac-FS17_Specs_V1.pdf",
+  "sets": [
+    {
+      "set_number": "01",
+      "description": "1 - BALANCE OF DOOR HARDWARE TO BE SUPPLIED BY ALUMINUM SUPPLIER; CARD READER BY SECURITY SUB DIV.28 TO RELEASE DEVICE FOR ACCESS; OPENING TO COMPLY WITH LEVEL E TESTING",
+      "status": "active",
+      "locations": [
+        {
+          "page": 406,
+          "bbox": [
+            72.0,
+            361.8,
+            535.8,
+            620.5
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 4.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5 NRP",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L038",
+            "p406_L039",
+            "p406_L040",
+            "p406_L041",
+            "p406_L042",
+            "p406_L043",
+            "p406_L044"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "POWER TRANSFER",
+          "catalog_number": "EPT10 CON",
+          "mfr": "VON",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L045",
+            "p406_L046",
+            "p406_L047",
+            "p406_L048",
+            "p406_L049",
+            "p406_L050",
+            "p406_L051"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "EXIT DEVICE",
+          "catalog_number": "EX76 CVR Electric Trim",
+          "mfr": "ADA",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L052",
+            "p406_L053",
+            "p406_L054",
+            "p406_L055",
+            "p406_L056",
+            "p406_L057"
+          ],
+          "field_confidence": {
+            "mfr": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "RIM CYLINDER",
+          "catalog_number": "20-057 ICX",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L058",
+            "p406_L059",
+            "p406_L060",
+            "p406_L061",
+            "p406_L062",
+            "p406_L063",
+            "p406_L064"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "90 DEG OFFSET PULL",
+          "catalog_number": "8190EZHD 10\" O",
+          "mfr": "IVE",
+          "finish": "630-316",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L065",
+            "p406_L066",
+            "p406_L067",
+            "p406_L068",
+            "p406_L069",
+            "p406_L070",
+            "p406_L071",
+            "p406_L072"
+          ],
+          "field_confidence": {
+            "finish": 0.5
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L073",
+            "p406_L074",
+            "p406_L075",
+            "p406_L076",
+            "p406_L077",
+            "p406_L078",
+            "p406_L079"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "CUSH SHOE SUPPORT",
+          "catalog_number": "4040XP-30",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L080",
+            "p406_L081",
+            "p406_L082",
+            "p406_L083",
+            "p406_L084",
+            "p406_L085",
+            "p406_L086"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "BLADE STOP SPACER",
+          "catalog_number": "4040XP-61",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L087",
+            "p406_L088",
+            "p406_L089",
+            "p406_L090",
+            "p406_L091",
+            "p406_L092",
+            "p406_L093"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "THRESHOLD",
+          "catalog_number": "566A-223",
+          "mfr": "ZER",
+          "finish": "A",
+          "notes": null,
+          "source_line_ids": [
+            "p406_L094",
+            "p406_L095",
+            "p406_L096",
+            "p406_L097",
+            "p406_L098",
+            "p406_L099",
+            "p406_L100"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p406_L031",
+        "p406_L032",
+        "p406_L033",
+        "p406_L101",
+        "p406_L102",
+        "p406_L103"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "02",
+      "description": "40",
+      "status": "active",
+      "locations": [
+        {
+          "page": 407,
+          "bbox": [
+            72.0,
+            72.3,
+            535.8,
+            266.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 7.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5 NRP",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L014",
+            "p407_L015",
+            "p407_L016",
+            "p407_L017",
+            "p407_L018",
+            "p407_L019",
+            "p407_L020"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PANIC HARDWARE",
+          "catalog_number": "WS-9927-EO",
+          "mfr": "VON",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L021",
+            "p407_L022",
+            "p407_L023",
+            "p407_L024",
+            "p407_L025",
+            "p407_L026",
+            "p407_L027"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PANIC HARDWARE",
+          "catalog_number": "WS-9927-L-06",
+          "mfr": "VON",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L028",
+            "p407_L029",
+            "p407_L030",
+            "p407_L031",
+            "p407_L032",
+            "p407_L033",
+            "p407_L034"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "RIM CYLINDER",
+          "catalog_number": "20-057 ICX",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L035",
+            "p407_L036",
+            "p407_L037",
+            "p407_L038",
+            "p407_L039",
+            "p407_L040",
+            "p407_L041"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 2.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L042",
+            "p407_L043",
+            "p407_L044",
+            "p407_L045",
+            "p407_L046",
+            "p407_L047",
+            "p407_L048"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 2.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 1\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L049",
+            "p407_L050",
+            "p407_L051",
+            "p407_L052",
+            "p407_L053",
+            "p407_L054",
+            "p407_L055"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L056",
+            "p407_L057",
+            "p407_L058",
+            "p407_L059",
+            "p407_L060",
+            "p407_L061",
+            "p407_L062"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "MEETING STILE",
+          "catalog_number": "328AA-S",
+          "mfr": "ZER",
+          "finish": "AA",
+          "notes": "SET",
+          "source_line_ids": [
+            "p407_L063",
+            "p407_L064",
+            "p407_L065",
+            "p407_L066",
+            "p407_L067",
+            "p407_L068",
+            "p407_L069"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "THRESHOLD",
+          "catalog_number": "566A-223",
+          "mfr": "ZER",
+          "finish": "A",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L070",
+            "p407_L071",
+            "p407_L072",
+            "p407_L073",
+            "p407_L074",
+            "p407_L075",
+            "p407_L076"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p407_L007",
+        "p407_L008",
+        "p407_L009"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "set_number": "03",
+      "description": "12A, 33B, 39, 41A, 41B - CARD READER OR KEYPAD AND POWER SUPPLY BY SECURITY SUB DIV. 28 TO RELEASE DEVICE FOR ACCESS.; OPENING TO COMPLY WITH LEVEL E TESTING",
+      "status": "active",
+      "locations": [
+        {
+          "page": 407,
+          "bbox": [
+            72.0,
+            306.6,
+            535.8,
+            551.9
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 4.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5 NRP",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L088",
+            "p407_L089",
+            "p407_L090",
+            "p407_L091",
+            "p407_L092",
+            "p407_L093",
+            "p407_L094"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "POWER TRANSFER",
+          "catalog_number": "EPT10 CON",
+          "mfr": "VON",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L095",
+            "p407_L096",
+            "p407_L097",
+            "p407_L098",
+            "p407_L099",
+            "p407_L100",
+            "p407_L101"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "ELEC FIRE EXIT HARDWARE",
+          "catalog_number": "RX-QEL-WS-9927-L-F-06 24 VDC",
+          "mfr": "VON",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L102",
+            "p407_L103",
+            "p407_L104",
+            "p407_L105",
+            "p407_L106",
+            "p407_L107",
+            "p407_L108",
+            "p407_L109"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "RIM CYLINDER",
+          "catalog_number": "20-057 ICX",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L110",
+            "p407_L111",
+            "p407_L112",
+            "p407_L113",
+            "p407_L114",
+            "p407_L115",
+            "p407_L116"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L117",
+            "p407_L118",
+            "p407_L119",
+            "p407_L120",
+            "p407_L121",
+            "p407_L122",
+            "p407_L123"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L124",
+            "p407_L125",
+            "p407_L126",
+            "p407_L127",
+            "p407_L128",
+            "p407_L129",
+            "p407_L130"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "THRESHOLD",
+          "catalog_number": "566A-223",
+          "mfr": "ZER",
+          "finish": "A",
+          "notes": null,
+          "source_line_ids": [
+            "p407_L131",
+            "p407_L132",
+            "p407_L133",
+            "p407_L134",
+            "p407_L135",
+            "p407_L136",
+            "p407_L137"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "WIRE HARNESS",
+          "catalog_number": "CON-12",
+          "mfr": "SCH",
+          "finish": null,
+          "notes": null,
+          "source_line_ids": [
+            "p407_L138",
+            "p407_L139",
+            "p407_L140",
+            "p407_L141",
+            "p407_L142",
+            "p407_L143"
+          ],
+          "field_confidence": {}
+        }
+      ],
+      "source_line_ids": [
+        "p407_L077",
+        "p407_L078",
+        "p407_L079",
+        "p407_L080",
+        "p407_L081",
+        "p407_L082",
+        "p407_L083",
+        "p407_L144",
+        "p407_L145",
+        "p407_L146"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "04",
+      "description": "4B, 24C, 33A - CARD READER AND POWER SUPPLY BY SECURITY SUB TO RELEASE DEVICE FOR ACCESS",
+      "status": "active",
+      "locations": [
+        {
+          "page": 408,
+          "bbox": [
+            72.0,
+            72.3,
+            535.8,
+            294.5
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5 NRP",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L016",
+            "p408_L017",
+            "p408_L018",
+            "p408_L019",
+            "p408_L020",
+            "p408_L021",
+            "p408_L022"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "POWER TRANSFER",
+          "catalog_number": "EPT10 CON",
+          "mfr": "VON",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L023",
+            "p408_L024",
+            "p408_L025",
+            "p408_L026",
+            "p408_L027",
+            "p408_L028",
+            "p408_L029"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "ELEC FIRE EXIT HARDWARE",
+          "catalog_number": "QEL-98-L-F-06-CON 24 VDC",
+          "mfr": "VON",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L030",
+            "p408_L031",
+            "p408_L032",
+            "p408_L033",
+            "p408_L034",
+            "p408_L035",
+            "p408_L036"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "RIM CYLINDER",
+          "catalog_number": "20-057 ICX",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L037",
+            "p408_L038",
+            "p408_L039",
+            "p408_L040",
+            "p408_L041",
+            "p408_L042",
+            "p408_L043"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L044",
+            "p408_L045",
+            "p408_L046",
+            "p408_L047",
+            "p408_L048",
+            "p408_L049",
+            "p408_L050"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L051",
+            "p408_L052",
+            "p408_L053",
+            "p408_L054",
+            "p408_L055",
+            "p408_L056",
+            "p408_L057"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L058",
+            "p408_L059",
+            "p408_L060",
+            "p408_L061",
+            "p408_L062",
+            "p408_L063",
+            "p408_L064"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "THRESHOLD",
+          "catalog_number": "65A-223",
+          "mfr": "ZER",
+          "finish": "A",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L065",
+            "p408_L066",
+            "p408_L067",
+            "p408_L068",
+            "p408_L069",
+            "p408_L070",
+            "p408_L071"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p408_L007",
+        "p408_L008",
+        "p408_L009",
+        "p408_L010",
+        "p408_L011",
+        "p408_L072"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "05",
+      "description": "21A, 21B",
+      "status": "active",
+      "locations": [
+        {
+          "page": 408,
+          "bbox": [
+            72.0,
+            336.6,
+            535.3,
+            490.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L081",
+            "p408_L082",
+            "p408_L083",
+            "p408_L084",
+            "p408_L085",
+            "p408_L086",
+            "p408_L087"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "CLASSROOM LOCK",
+          "catalog_number": "ND70PD RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L088",
+            "p408_L089",
+            "p408_L090",
+            "p408_L091",
+            "p408_L092",
+            "p408_L093",
+            "p408_L094"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L095",
+            "p408_L096",
+            "p408_L097",
+            "p408_L098",
+            "p408_L099",
+            "p408_L100",
+            "p408_L101"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L102",
+            "p408_L103",
+            "p408_L104",
+            "p408_L105",
+            "p408_L106",
+            "p408_L107",
+            "p408_L108"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L109",
+            "p408_L110",
+            "p408_L111",
+            "p408_L112",
+            "p408_L113",
+            "p408_L114",
+            "p408_L115"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p408_L116",
+            "p408_L117",
+            "p408_L118",
+            "p408_L119",
+            "p408_L120",
+            "p408_L121",
+            "p408_L122"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p408_L073",
+        "p408_L074",
+        "p408_L075",
+        "p408_L076"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "set_number": "06",
+      "description": "42, 43A",
+      "status": "active",
+      "locations": [
+        {
+          "page": 409,
+          "bbox": [
+            72.0,
+            72.3,
+            535.8,
+            253.0
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L015",
+            "p409_L016",
+            "p409_L017",
+            "p409_L018",
+            "p409_L019",
+            "p409_L020",
+            "p409_L021"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "CLASSROOM LOCK",
+          "catalog_number": "ND70PD RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L022",
+            "p409_L023",
+            "p409_L024",
+            "p409_L025",
+            "p409_L026",
+            "p409_L027",
+            "p409_L028"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "ELECTRIC STRIKE",
+          "catalog_number": "6211 FSE 12/16/24/28 VAC/VDC",
+          "mfr": "VON",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L029",
+            "p409_L030",
+            "p409_L031",
+            "p409_L032",
+            "p409_L033",
+            "p409_L034"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURF. AUTO OPERATOR",
+          "catalog_number": "4642 WMS 120 VAC",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L035",
+            "p409_L036",
+            "p409_L037",
+            "p409_L038",
+            "p409_L039",
+            "p409_L040"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 2.0,
+          "description": "ACTUATOR, TOUCH",
+          "catalog_number": "8310-856",
+          "mfr": "LCN",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L041",
+            "p409_L042",
+            "p409_L043",
+            "p409_L044",
+            "p409_L045",
+            "p409_L046"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L047",
+            "p409_L048",
+            "p409_L049",
+            "p409_L050",
+            "p409_L051",
+            "p409_L052",
+            "p409_L053"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L054",
+            "p409_L055",
+            "p409_L056",
+            "p409_L057",
+            "p409_L058",
+            "p409_L059",
+            "p409_L060"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L061",
+            "p409_L062",
+            "p409_L063",
+            "p409_L064",
+            "p409_L065",
+            "p409_L066",
+            "p409_L067"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p409_L007",
+        "p409_L008",
+        "p409_L009",
+        "p409_L010"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "07",
+      "description": "2, 5, 25, 33 - CARD READER BY SECURITY SUB DIV.28 TO RELEASE LOCK FOR ACCESS",
+      "status": "active",
+      "locations": [
+        {
+          "page": 409,
+          "bbox": [
+            72.0,
+            275.6,
+            535.3,
+            484.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 2.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L078",
+            "p409_L079",
+            "p409_L080",
+            "p409_L081",
+            "p409_L082",
+            "p409_L083",
+            "p409_L084"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "ELECTRIC HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5 CON TW8",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L085",
+            "p409_L086",
+            "p409_L087",
+            "p409_L088",
+            "p409_L089",
+            "p409_L090"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "STOREROOM LOCK",
+          "catalog_number": "ND80PDEU RHO RX 12V/24V DC",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L091",
+            "p409_L092",
+            "p409_L093",
+            "p409_L094",
+            "p409_L095",
+            "p409_L096",
+            "p409_L097"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L098",
+            "p409_L099",
+            "p409_L100",
+            "p409_L101",
+            "p409_L102",
+            "p409_L103",
+            "p409_L104"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L105",
+            "p409_L106",
+            "p409_L107",
+            "p409_L108",
+            "p409_L109",
+            "p409_L110",
+            "p409_L111"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L112",
+            "p409_L113",
+            "p409_L114",
+            "p409_L115",
+            "p409_L116",
+            "p409_L117",
+            "p409_L118"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L119",
+            "p409_L120",
+            "p409_L121",
+            "p409_L122",
+            "p409_L123",
+            "p409_L124",
+            "p409_L125"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p409_L068",
+        "p409_L069",
+        "p409_L070",
+        "p409_L071",
+        "p409_L072",
+        "p409_L073",
+        "p409_L126"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "08",
+      "description": "3, 6, 10",
+      "status": "active",
+      "locations": [
+        {
+          "page": 409,
+          "bbox": [
+            72.0,
+            526.5,
+            535.3,
+            666.9
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L136",
+            "p409_L137",
+            "p409_L138",
+            "p409_L139",
+            "p409_L140",
+            "p409_L141",
+            "p409_L142"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "ENTRANCE LOCK",
+          "catalog_number": "ND53PD RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L143",
+            "p409_L144",
+            "p409_L145",
+            "p409_L146",
+            "p409_L147",
+            "p409_L148",
+            "p409_L149"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L150",
+            "p409_L151",
+            "p409_L152",
+            "p409_L153",
+            "p409_L154",
+            "p409_L155",
+            "p409_L156"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L157",
+            "p409_L158",
+            "p409_L159",
+            "p409_L160",
+            "p409_L161",
+            "p409_L162",
+            "p409_L163"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "488SBR PSA",
+          "mfr": "ZER",
+          "finish": "BR",
+          "notes": null,
+          "source_line_ids": [
+            "p409_L164",
+            "p409_L165",
+            "p409_L166",
+            "p409_L167",
+            "p409_L168",
+            "p409_L169",
+            "p409_L170"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p409_L127",
+        "p409_L128",
+        "p409_L129",
+        "p409_L130",
+        "p409_L131"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "09",
+      "description": null,
+      "status": "active",
+      "locations": [
+        {
+          "page": 410,
+          "bbox": [
+            72.0,
+            89.8,
+            535.3,
+            229.9
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L015",
+            "p410_L016",
+            "p410_L017",
+            "p410_L018",
+            "p410_L019",
+            "p410_L020",
+            "p410_L021"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "STOREROOM LOCK",
+          "catalog_number": "ND80PD RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L022",
+            "p410_L023",
+            "p410_L024",
+            "p410_L025",
+            "p410_L026",
+            "p410_L027",
+            "p410_L028"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP SCUSH",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L029",
+            "p410_L030",
+            "p410_L031",
+            "p410_L032",
+            "p410_L033",
+            "p410_L034",
+            "p410_L035"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L036",
+            "p410_L037",
+            "p410_L038",
+            "p410_L039",
+            "p410_L040",
+            "p410_L041",
+            "p410_L042"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 3.0,
+          "description": "SILENCER",
+          "catalog_number": "SR64",
+          "mfr": "IVE",
+          "finish": "GRY",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L043",
+            "p410_L044",
+            "p410_L045",
+            "p410_L046",
+            "p410_L047",
+            "p410_L048",
+            "p410_L049"
+          ],
+          "field_confidence": {}
+        }
+      ],
+      "source_line_ids": [
+        "p410_L007",
+        "p410_L008",
+        "p410_L009"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "10",
+      "description": null,
+      "status": "active",
+      "locations": [
+        {
+          "page": 410,
+          "bbox": [
+            72.0,
+            252.5,
+            535.3,
+            406.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L061",
+            "p410_L062",
+            "p410_L063",
+            "p410_L064",
+            "p410_L065",
+            "p410_L066",
+            "p410_L067"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PRIVACY LOCK",
+          "catalog_number": "ND40S RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L068",
+            "p410_L069",
+            "p410_L070",
+            "p410_L071",
+            "p410_L072",
+            "p410_L073",
+            "p410_L074"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L075",
+            "p410_L076",
+            "p410_L077",
+            "p410_L078",
+            "p410_L079",
+            "p410_L080",
+            "p410_L081"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L082",
+            "p410_L083",
+            "p410_L084",
+            "p410_L085",
+            "p410_L086",
+            "p410_L087",
+            "p410_L088"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L089",
+            "p410_L090",
+            "p410_L091",
+            "p410_L092",
+            "p410_L093",
+            "p410_L094",
+            "p410_L095"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L096",
+            "p410_L097",
+            "p410_L098",
+            "p410_L099",
+            "p410_L100",
+            "p410_L101",
+            "p410_L102"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p410_L050",
+        "p410_L051",
+        "p410_L052",
+        "p410_L053",
+        "p410_L054",
+        "p410_L055"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "11",
+      "description": null,
+      "status": "active",
+      "locations": [
+        {
+          "page": 410,
+          "bbox": [
+            72.0,
+            446.5,
+            535.3,
+            600.1
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L115",
+            "p410_L116",
+            "p410_L117",
+            "p410_L118",
+            "p410_L119",
+            "p410_L120",
+            "p410_L121"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PASSAGE SET",
+          "catalog_number": "ND10S RHO",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L122",
+            "p410_L123",
+            "p410_L124",
+            "p410_L125",
+            "p410_L126",
+            "p410_L127",
+            "p410_L128"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L129",
+            "p410_L130",
+            "p410_L131",
+            "p410_L132",
+            "p410_L133",
+            "p410_L134",
+            "p410_L135"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L136",
+            "p410_L137",
+            "p410_L138",
+            "p410_L139",
+            "p410_L140",
+            "p410_L141",
+            "p410_L142"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L143",
+            "p410_L144",
+            "p410_L145",
+            "p410_L146",
+            "p410_L147",
+            "p410_L148",
+            "p410_L149"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p410_L150",
+            "p410_L151",
+            "p410_L152",
+            "p410_L153",
+            "p410_L154",
+            "p410_L155",
+            "p410_L156"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p410_L103",
+        "p410_L104",
+        "p410_L105",
+        "p410_L106",
+        "p410_L107",
+        "p410_L108",
+        "p410_L109"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "set_number": "12",
+      "description": null,
+      "status": "active",
+      "locations": [
+        {
+          "page": 411,
+          "bbox": [
+            72.0,
+            89.8,
+            535.3,
+            268.6
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 3.0,
+          "description": "HINGE",
+          "catalog_number": "5BB1 4.5 X 4.5",
+          "mfr": "IVE",
+          "finish": "652",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L015",
+            "p411_L016",
+            "p411_L017",
+            "p411_L018",
+            "p411_L019",
+            "p411_L020",
+            "p411_L021"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "PRIVACY LOCK W/ OUTSIDE INDICATOR",
+          "catalog_number": "ND40S RHO OS-OCC",
+          "mfr": "SCH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L022",
+            "p411_L023",
+            "p411_L024",
+            "p411_L025",
+            "p411_L026",
+            "p411_L027",
+            "p411_L028",
+            "p411_L029"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "SURFACE CLOSER",
+          "catalog_number": "4040XP RW/PA",
+          "mfr": "LCN",
+          "finish": "689",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L030",
+            "p411_L031",
+            "p411_L032",
+            "p411_L033",
+            "p411_L034",
+            "p411_L035",
+            "p411_L036"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "KICK PLATE",
+          "catalog_number": "8400 10\" X 2\" LDW B-CS",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L037",
+            "p411_L038",
+            "p411_L039",
+            "p411_L040",
+            "p411_L041",
+            "p411_L042",
+            "p411_L043"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "WALL STOP",
+          "catalog_number": "WS406/407CCV",
+          "mfr": "IVE",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L044",
+            "p411_L045",
+            "p411_L046",
+            "p411_L047",
+            "p411_L048",
+            "p411_L049",
+            "p411_L050"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "GASKETING",
+          "catalog_number": "188SBK PSA",
+          "mfr": "ZER",
+          "finish": "BK",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L051",
+            "p411_L052",
+            "p411_L053",
+            "p411_L054",
+            "p411_L055",
+            "p411_L056",
+            "p411_L057"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "DOOR SWEEP",
+          "catalog_number": "39A",
+          "mfr": "ZER",
+          "finish": "A",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L058",
+            "p411_L059",
+            "p411_L060",
+            "p411_L061",
+            "p411_L062",
+            "p411_L063",
+            "p411_L064"
+          ],
+          "field_confidence": {
+            "finish": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p411_L007",
+        "p411_L008",
+        "p411_L009"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "set_number": "13",
+      "description": "Provide each SL door(s) with the following:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 411,
+          "bbox": [
+            72.0,
+            291.2,
+            534.1,
+            454.4
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 1.0,
+          "description": "BARN DOOR HARDWARE KIT",
+          "catalog_number": "2610F96S SOFT CLOSE",
+          "mfr": "JOH",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L086",
+            "p411_L087",
+            "p411_L088",
+            "p411_L089",
+            "p411_L090",
+            "p411_L091",
+            "p411_L092"
+          ],
+          "field_confidence": {
+            "mfr": 0.8
+          }
+        },
+        {
+          "qty": 1.0,
+          "description": "BOTTOM FLOOR GUIDE",
+          "catalog_number": "C-GUIDE SLDING BARN DOOR FLOOR GUIDE",
+          "mfr": null,
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L093",
+            "p411_L094",
+            "p411_L095",
+            "p411_L096",
+            "p411_L097",
+            "p411_L098"
+          ],
+          "field_confidence": {}
+        },
+        {
+          "qty": 1.0,
+          "description": "DOOR PULL",
+          "catalog_number": "AP411G 12 CTC",
+          "mfr": "TRI",
+          "finish": "630",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L099",
+            "p411_L100",
+            "p411_L101",
+            "p411_L102",
+            "p411_L103",
+            "p411_L104"
+          ],
+          "field_confidence": {}
+        }
+      ],
+      "source_line_ids": [
+        "p411_L065",
+        "p411_L066",
+        "p411_L067",
+        "p411_L068",
+        "p411_L069",
+        "p411_L070",
+        "p411_L071",
+        "p411_L072",
+        "p411_L073",
+        "p411_L074",
+        "p411_L075",
+        "p411_L076",
+        "p411_L077",
+        "p411_L078",
+        "p411_L079",
+        "p411_L080",
+        "p411_L081"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "set_number": "14",
+      "description": "Provide each RU door(s) with the following:",
+      "status": "active",
+      "locations": [
+        {
+          "page": 411,
+          "bbox": [
+            72.0,
+            494.6,
+            531.5,
+            594.1
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": null,
+          "description": "ALL HARDWARE",
+          "catalog_number": "BY OVERHEAD DOOR MFG",
+          "mfr": "B/O",
+          "finish": "626",
+          "notes": null,
+          "source_line_ids": [
+            "p411_L119",
+            "p411_L120",
+            "p411_L121",
+            "p411_L122",
+            "p411_L123"
+          ],
+          "field_confidence": {
+            "catalog_number": 0.5,
+            "mfr": 0.8
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p411_L105",
+        "p411_L106",
+        "p411_L107",
+        "p411_L108",
+        "p411_L109",
+        "p411_L110",
+        "p411_L111",
+        "p411_L112",
+        "p411_L113",
+        "p411_L114"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "set_number": "15",
+      "description": "12B",
+      "status": "active",
+      "locations": [
+        {
+          "page": 412,
+          "bbox": [
+            72.0,
+            89.8,
+            472.7,
+            175.9
+          ]
+        }
+      ],
+      "components": [
+        {
+          "qty": 1.0,
+          "description": "ALL HARDWARE",
+          "catalog_number": "BY GATE MFG",
+          "mfr": null,
+          "finish": null,
+          "notes": null,
+          "source_line_ids": [
+            "p412_L014",
+            "p412_L015",
+            "p412_L016",
+            "p412_L017",
+            "p412_L018"
+          ],
+          "field_confidence": {
+            "catalog_number": 0.5
+          }
+        }
+      ],
+      "source_line_ids": [
+        "p412_L007",
+        "p412_L008"
+      ],
+      "confidence": 0.6
+    }
+  ]
+}

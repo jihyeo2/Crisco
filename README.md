@@ -20,7 +20,7 @@ Put specbook PDFs under `specbooks/` (not committed).
 ```bash
 python -m extract <pdf> -o out/result.json          # extract (calls Claude)
 python -m extract <pdf> -o out/r.json --pages 28-46 # limit to pages
-streamlit run viewer/app.py                         # review, edit, export
+streamlit run viewer/app.py                         # review, edit, export (examples/ included)
 python -m extract.evaluate out/r.json eval/ground_truth/jcryan.json   # score
 python -m extract.pages <pdf>                       # preview page selection (free)
 python -m extract.recon                             # scan all specbooks (free)
@@ -28,6 +28,10 @@ pytest
 ```
 
 The CLI prints token usage and an estimated cost for each run.
+
+No API key? `examples/` holds finished outputs for five specbooks, so the viewer
+works straight away; it only needs the specbook PDFs under `specbooks/` to render
+pages (see `examples/README.md`).
 
 ## How it works
 
@@ -187,5 +191,6 @@ National Doors (8 pages) $0.28, Lyons (11 pages) $0.43. Most output tokens are t
 extract/   pipeline: recon, pages, lines, llm, assemble, codes, resolve, models, evaluate
 viewer/    Streamlit review app (app.py) and its tested helpers (render.py)
 eval/      ground truth and recorded results
+examples/  finished outputs for the viewer (no API key needed)
 tests/     pytest suite
 ```
